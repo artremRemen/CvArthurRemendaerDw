@@ -1,0 +1,13 @@
+$Mainbackground: rgb(0, 0, 0);
+$MainbackgroundOpacity: rgba(0, 0, 0,0.5);
+$mainColor: rgb(255, 255, 255);
+$DarkGray:#252525;
+$Gray:#868686;
+
+::selection {
+    background: $mainColor;
+    color: $Mainbackground;
+  }
+  
+  
+  

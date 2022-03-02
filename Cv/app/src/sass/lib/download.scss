@@ -1,0 +1,20 @@
+.Main__download{
+    input:checked+label{
+        text-decoration: none;
+        color: $Mainbackground;
+        /*trasition effect for background*/
+        background-position: 100% 100%;
+
+    }
+    input ~ form{
+        transform: scale(0, 0);
+        transform-origin: bottom;
+        transition-duration: 2s;
+    }
+    input:checked ~ form{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+
+    }
+
+}

@@ -1,0 +1,5 @@
+git clone lienFourniParGitHub           récuperer le code d'un autre
+
+git push origin master                  envoyer le code sur github
+
+git pull origin master                  reimporter le code de github vers le PC 

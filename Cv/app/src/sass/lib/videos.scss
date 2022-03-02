@@ -1,0 +1,8 @@
+input[type="checkbox"] ~ .Videos__videosPlayer{
+    height: 0;
+    transition-duration: 1s;
+}
+input[type="checkbox"]:checked ~ .Videos__videosPlayer{
+    height: 100vh;
+    transition-duration: 1s;
+}

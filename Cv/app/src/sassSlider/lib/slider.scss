@@ -1,0 +1,108 @@
+ 
+    input:checked +label{
+        color: $mainColor;
+        text-decoration: underline;
+    }
+    input[id="HTML"] ~div:nth-last-child(2) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: left top;
+        transition-duration: 2s;
+    }
+    input[id="SVG"] ~div:nth-last-child(1) article{
+        position: absolute;
+        background-color: none;
+        transform-origin: right top;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transition-duration: 2s;
+    }
+    input[id="HTML"]:checked ~div:nth-last-child(2) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+    input[id="SVG"]:checked ~div:nth-last-child(1) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+
+    input[id="CSS"] ~div:nth-last-child(2) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: left top;
+        transition-duration: 2s;
+    }
+    input[id="SASS"] ~div:nth-last-child(1) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: right top;
+        transition-duration: 2s;
+    }
+    input[id="CSS"]:checked ~div:nth-last-child(2) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+    input[id="SASS"]:checked ~div:nth-last-child(1) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+
+    input[id="Javascript"] ~div:nth-last-child(3) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: left top;
+        transition-duration: 2s;
+    }
+    input[id="Typescript"] ~div:nth-last-child(2) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: center top;
+        transition-duration: 2s;
+    }
+    input[id="NodeJs"] ~div:nth-last-child(1) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: right top;
+        transition-duration: 2s;
+    }
+    input[id="Javascript"]:checked ~div:nth-last-child(3) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+    input[id="Typescript"]:checked ~div:nth-last-child(2) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+    input[id="NodeJs"]:checked ~div:nth-last-child(1) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+
+    input[id="PHP"] ~div:nth-last-child(2) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: left top;
+        transition-duration: 2s;
+    }
+    input[id="laravel"] ~div:nth-last-child(1) article{
+        position: absolute;
+        transform: scale(0, 0);
+        overflow: hidden;
+        transform-origin: right top;
+        transition-duration: 2s;
+    }
+    input[id="PHP"]:checked ~div:nth-last-child(2) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }
+    input[id="laravel"]:checked ~div:nth-last-child(1) article{
+        transform: scale(1, 1);
+        transition-duration: 2s;
+    }

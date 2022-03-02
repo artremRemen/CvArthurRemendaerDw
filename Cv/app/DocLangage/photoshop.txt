@@ -1,0 +1,27 @@
+WINDOWS
+
+ctrl K			Racourcis vers le menus principal
+
+ctrl N 			Creer un nouveau fichier
+
+ctrl O			ouvrir un ancient fichier
+
+
+
+
+
+
+
+
+
+
+
+
+
+MAC
+
+cmd K 			racourcis vers le menus principal
+
+cmd N 			creer un nouveau fichier
+
+cmd O 			ouvrir un ancient fichier

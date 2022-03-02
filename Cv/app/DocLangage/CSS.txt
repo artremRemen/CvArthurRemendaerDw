@@ -1,0 +1,480 @@
+COTER HTML 
+
+/*class="nomClass"        définir une class pour sélectionner un ou plusieurs élément 
+
+id="nomID"              definis un ID pour séléctionner un élément de la class*/
+
+
+le fil d'ariane est super important dans un sie car il aide l'user a ce reperer dans le site et pouvoir lui permettre de renaviguer sur le site
+
+
+systeme de cascade 
+
+ordre                       joue sur le style appliquer car pour un meme poid c'est le deuxieme selecteur qui seras prioritaire 
+niveau de sicificité        le poid des selecteurs joueras sur le prioritaire plus le selecteur est spéficique plus il auras de poids et plus il seras prioritaire  selecteur de classe plus specifique que le selecteur de balise  (id= 100        class= 10       balise= 1)  les pseudoclass valent 10 et pseudo éléments valent 1 l'* qui est globale vaut 0 les attributs valent des classes specificityKeygen 
+l'héritage                  si une balise parent prend du style les enfants peuvent le prendre aussi en foction du poid
+origine des regles          en fonction de l'ordre dans lequel les feuilles arrive certaines vont avoir la priorité et d'autre la perdre 
+le média (media querry, ...)
+
+
+COTER CSS
+
+SELECTEUR
+
+/*selecteurs simple ne cible qu'un seul element dans la cascade, combiner selectionne deux elements dans le selecteurs */
+
+/*
+*                   selectionne tous ce qui ce trouve dans le code HTML (il est souvent sous entendus)
+. nomdeclass        (selectionne la classe demander)
+nomBalise           mettra la propieter sur toutes les balises selectionner 
+balise.class.class  selectionne les elements qui ont les deux classes     
+dieze nomId         permet de selectionner l'ID indiquer sur la page    eviter de travailler avec ce selecteur car il a un pod elever et il est difficile a écraser lors que l'on veut changer de style 
+~                   adjacent generale va chercher n'importe quel adjacant meme s'il est apres une autre balise
+
+selecteurs combiner 
+
+balise espace balise(class,...)     descendant  va chercher les efants de la premiere balise 
+balise > balise                     selecteur d'enfant directe va chercher toutes les éléments qui sont directement sous la premiere balise 
+balise+balise                       selecteru d'adjacent directe (les freres directe de la balise selectionner(la premiere balise ne seras pas affecter)) (le deuxieme) est presque le meme quenchild(n+1) mais il est preferable car plus vieux et donc plus compatible il ne peut rien avoir entre les deux balises (doit le suivre directement)
+balise+balise+balise...             dépend du nbre utiliser dans le code mais pas super car le site doit rester fixe et ne doit pas subir de mise a jours du coter HTML
+selecteurs, selecteurs              permet d'utiliser la meme fonctions pour plusieurs selecteurs
+[attribut]                          attribut= val a la valeur      attribut~= contient la valeur    attribut|= commence par la valeur    les crochets peuvent etres mis un derriere lautre   attr^= valeur   la valeur doit commencer obligatoirement pas (meme si ce n'est que la premiere lettre d'un mot)    attr$= valeur qui finis par   attr $= contient la valeur
+*/
+
+il existe 4 pseudo elements
+
+:first-line             selectionner la premiere ligne de texte (dépend de la taille de l'écrans)
+:first-letter           selectionner la premiere lettre 
+:before                 injecter le code avant la balise (exemple *) grace a l'attribut content:"contenus"; il ce situe dans la balise mais avant la zone de contenus   content:"["a(lien de l'url)"]"
+:after                  injecter le code apres la balise                il ce situe dans la balise mais apres la zone de contenus       clear: bath; va simuler un contenus avec l'élément afin de forcer le parent a prendre la taille neccessaire 
+:nth-child(an+b)        le n est la valeur de la balise affectée actuelement  a et b doivent etre un nombre entier  la formule peut varier en fonction des besoint a définit la facon dont on doit avancer et le b l'enfant de départ ex nth-child(2n+2) il va commecner au deuieme enfant et ce déplacer deux par deux event représente les éléments paires et odd vaut les éléments impaires nth-child(even)  nthmaster.com       nthtester
+nth-last-child()                ca fait la meme que le nth-child mais en comencant a l'envers 
+nth-of-type()
+first-of-type()                 ne prend que un type donné expemple le premier p  et passe les balises qui ne sont pas du type demander exemple s'il y a un span entre deux P le code ne le compteras pas et continueras le compte au prochain P 
+last-of-type()                 meme chose mais avec le dernier 
+only-child()                    selectionne un élément lorsqu'il est seul dans le parent
+only-of-type()                    selectionne un élément de ce type lorsqu'il est seul dans le parent      
+not()                           fait l'inverse de la condition a l'interieur de la parenthese il ne peut pas contenir un selecteur miltiple il ne peut prendre qu'un seul condition
+target                          va affecter l'ément cibler par l'ID au moment du clique sur le lien et que nous nous somme fait déplacer vers cet élément il est lier a une ancre renomer dans la page 
+empty                           si l'élément est vide(ne contient aucun enfant)
+chaked                          
+enable
+
+
+enfantsabsolut
+
+pseudoclass 
+
+balise balise:first-child                         premier enfant de la premiere balise selectionner(la premier enfnt balise) si on ne met pas de balise parent alors il selectionneras tous les premiers de la page HTML
+:link
+:visited
+:hover
+:active
+:focus          permet de styliser un focus (lors que la personne a ctiver dedans) pour les champs de formulaire par exemple
+:lang (symboleDeLangue)          definit les éléments définis par une certaine langue ou les codes 
+
+
+
+
+*               selectionne tous les élément
+{
+
+}
+
+body            sélectionne la balise body
+{
+
+}
+
+balise
+{
+
+}
+
+.nomClass           sélectionne les class portant se nom
+{
+
+}
+
+#nomID            sélectionne l'ID portant se nom
+{
+
+}
+
+balise1 balise2     selectionne l'élement balise 2 dans lélément balise 1 
+{
+
+}
+
+balise1 > balise2   selectionne les balise2 directement en dessous de la balise 1
+{
+
+}
+
+balise1 + balise2       selectionne les balise1 qui colle la balise1
+{
+
+}
+
+balise1 ~ balise2       selectionne toutes les balise2 voisine en dessous de la balise1
+{
+
+}
+
+balise[attr="valeur"]      selectionne les balise ayant les attributs ayant la valeurs valeur
+{
+
+}
+
+balise1, balise2            affecter deux balises
+{
+
+}
+
+
+
+les nbre peuvent etre mis en pixel(px) pour avoir la meme taille quoi qu'il arrive ou en pourcent(%) afin de varier en fonction de la taille de l'écrant 
+
+auto met en page par rapport au ratio des bloques 
+
+balise:hover                  affecte au survole
+
+balise:active                  lors qu'on a cliquer
+
+balise:visited                  lien visiter
+
+balise:focus                lors qu'on fait au clavier
+
+balise:nth-of-type(position de la balise)       selectionner une balise spécifique dans toutes celle qui sont définies
+
+display: block              cree un bloque qui prend toute la largeur de la page 
+
+display: inline             creer un bloque qui fait la taille du contenus (ne peut pas etre redimantionner) les marges ne sont prisent en compte selement sur les coter
+
+display: inlineblock        cree un bloque qui prend la taille du contenus mais qui peut etre modifier
+
+width: nbre;              définit la taille du block en px
+
+height: nbre;             definit la taille du block en px
+
+background: couleur de fond;    definit la couleur de fond du blockque
+
+padding: nbre de ;  nbre , nbre, nbre, nbre;    nbre, nbre, nbre;     nbre, nbre;    cree une marge interieur     cree une marge interieur en haut a droite en bas a droite  cree une marge en haut et en bas a gauche a droite    cree une marge en haut et en bas a gauche et a droite
+
+padding-top -right -bottom -left: nbre;
+
+margin: nbre de ;  nbre , nbre, nbre, nbre;    nbre, nbre, nbre;     nbre, nbre;    cree une marge exterieur     cree une marge exterieur en haut a droite en bas a droite  cree une marge en haut et en bas a gauche a droite    cree une marge en haut et en bas a gauche et a droite
+
+margin-top -right -bottom -left: nbre;
+
+color: propriete;  hexadécimal (#dddess)    nom de la couleur   hérite du parent (inherit)                 met de la couleur sur la balise
+
+font-size: px;                      définit la taille du texte 
+
+line-height: px; 1 (une fois la taille de la police le top est entre 1.4 et 1.6);                    définit la hauteur en haut des caractere
+
+letter-spacing: px;                                                     definit la distance entre chaque lettre
+
+font-familly: "police1", "police2",police3;                             définit pa police du texte (mettre a la fin serif ou sans-serif)
+
+text-align: center jusify left right;                                   definit l'alignement du text n'influence que les inline ou inlineblock
+
+text-justify: ....;                                                     change le text-aligne justify
+
+text-align-last;center;                                                 definit l'alignement de la derniere ligne
+
+text-shadow: 2px 2px 1px rgb(85, 85, 85);                               donne un effet d'ombre sur le texte
+
+overflow-wrap: normal(ne change rien)   break-world;                    casse les mots trop long
+
+hyphens: manual; none(ignore)   auto(casse les mots automatiquement pas super éfficasse)         casse la ligne avec un tiret a un endroit définit dans l'HTML grace a &sky;
+
+text-decoration: underline(souligne le texte);  none(pas de décoration)   
+
+font-weight: bold(gras)700 400(normal);
+
+font-style: normal  italic(italique);
+
+text-transform: uppercasse;                                                 met le text en majuscule
+
+
+FORMAT DE COULEUR
+
+RGB (0, 0, 0 )                          couleur opaque
+
+RGBA(0, 0, 0, 0 )       couleur avec trnasparance
+
+#fjezivz12645           couleur en hexadécimal      hexadécimal fonctionne en base 16 au lieux de base 10   0 1 2 3 4 5 6 7 8 9 a b c d e f     Couleur la plus utiliser
+
+#090 = #009900      
+
+#090a = #009900aa       le quatrieme chiffre ou lettre est la transparence
+
+hsl(0, 0%, 0%)          plus utile pour foncer la couleur
+
+hsla(0, 0%, 0%, 0)
+
+
+UNITE DE MESURES
+
+unitée absolue
+
+0px             nbre de pixel sur l'écrant
+
+0.0mn           mesure minimetre    pour les impression
+
+0.0cm           mesure en centimetre    pour les impression
+
+unitée relative
+
+0%              dépend de la taille de la box  ne fonctionne pas forcément pour la hauteur
+
+1vh             1% de la hauteur de lespace visible     tjrs relative part rapport a la taille de la fenetre
+
+1vw             1% de la taille de l'espace visible     tjrs relative part rapport a la taille de la fenetre
+
+1vmin           1% de la taille minimum de l'espace visible
+
+1vmax           1% de la taille maximum de l'éspace visible
+
+1em             valeur par rapport a la taille de la police  1 fois la taillede la police
+
+1rem            hauteur par rapport a la taille de la police définit dans la racine (html ou body)
+
+
+
+position: static(classic) relative(seul ne change rien il change le comportement des enfantsabsolute car il les positionne au dessus de la box et pas de l'écrant) absolute(mis par rapport a un autre élément) fixed(comme le absolute mais suis le scroll de la page) sticky(ne bougeras pas jusqua qu'il sorte du cadre et devient un absolute );           peut changer la hauteur et fait tous par rapport a la fenetre que se soit le height le width
+
+si position absolute on positionne par rapport a la fenetre si position relative sa décale l'élément si on mais du négatif il le décale dans l'autre sens 
+
+top:0  auto(prend la valeur minimum que tu peut);
+
+right:0;
+
+left:0;
+
+right:0;
+
+
+
+z-index: 2;         plus il est élever plus il seras devant les élémentsne sert a rien sur les statics
+
+float: none(basique) left(va se mettre sur la gauche le reste se mettras autoure) right(se met a droite le reste se met autoure)            float change le display en block  il sort du flux et ne calcul plus la hauteursi qui mettrais le reste du texte sur le floatpeut se corriger avec le overflow
+
+clear: left right both;         nettoie le float de droite de gauche ou les deux pour qu'il ne descende pas sous le paragraphe ou il est il faut le mettre sur l'élément qui doit etre nettoyer du float
+
+overflow: hidden;       resout le probleme du float si mis dans l'élément parent
+
+
+FLEXBOX
+
+display; flex;      cree une box
+
+flex-direction: row(gauche a ddoite)    row-reverse(droite a gauche)    column(un en dessosu des autres)    column reverse;             definis la direction du flex
+
+flex-wrap: wrap     wrap-reverse;                                va a la ligne quand il le faut 
+
+flex_flow: row wrap;                                    fait les deux proprieter en meme temps 
+
+justify-content: center (centrer les element)   flex-start(centrer a gauche)    flex-end(centrer a droite)      space-around(met des espace entre les éléments pour tous les rentrer)       space-between(met des espace sauf sur les coter);
+
+align_items: stretch(etire les éléments pour qu'ils rentre)     flex-start(align les éléments sur la ligne du haut)     flex-end(align sur la ligne du bas)   center(centre les éléments)   ;    align les élément verticalement 
+
+align-content    ''                                                      ''                                                    ''                                     ''              space-around(met un espace égale partout)       space-between(ne met pas d'espace en bas)
+
+order: place;       donne en ordre voulus au images que l'on place
+
+flex-grow:2;        prend plus d'espace que les autres (deux fois plus)
+
+flex-shrink:2;      prend moins d'espace que les autres éléments
+
+flex-basis:1%;      les images prennent 1%de la taille de l'écrant          0 egale 100% de l'écrant
+
+flex: 2 (grow ou shrink) 1%(basis);
+
+align-self: flex-end(aligner en bas)    flex-start(aligner en haut);
+
+
+background-                                 cree un fond au block
+
+color: rgba()                               met une couleur de fond
+
+image:url("chemin"),url(se met au dessus);      linear-Gradient(tobottom,top'right'left, rgba(couleur), rgba(couleur))(cree un dégrader)                  mettre une image en fond
+
+repeat:repeat-x(en x)   reapeat(partout) space(espace les éléments) round(met en rond)  no-repeat(pas de repetition)
+
+position: center top  left right1px bottom1%        positionner le bg 
+
+size:content(met l'image totale)    cover(l'image prendras tous l'écrant)   taille voulue par rapport a la largeur(1%)
+
+attachement: fixed(l'image seras figer ne bougeras pas au moment du scroll)     scroll(si on bouge le parent il bouge si on bouge celui ou il est il reste fixe)
+
+clip:border-box(prend tous meme les bordures)   padding-box(prend tous sauf les bordure)    content-box(ne prend que le content)    text(image ne se met que sur le text)
+
+background:url("") fixed no-reapeat center;
+
+cursor: pointer,...;            modifier le pointeur lors qu'il est dans la zone
+
+box-sizing: content-box(par defaut) border-box(prend en compte les bordures et le padding);
+
+!important          a la fin de la ligne de code signifie qu'il est plus important que les autres regles
+
+@font-face               définir une police perso
+{
+    font-familly:"nom";                     definit le ,nom de la police
+    src: url('')format("")                            définit le chemin d'access
+    font-style:                                         définit le type de police (italique ...)
+    font-weight: 100                           définbit le gras
+    font-display: auto(valeur par défaut)  block("blockage court")  swap(police de base puis police perso  le plus conseiller)  fallback(meme chose que l'autre) optionnal(met la valeur qui arrive si pas swap conseiller de mettre sa)                           chois du chargement des police par le nav 
+}                      
+
+@import: url("")                                importer l'url depuis le navigateur (plus lent que le mettre directement dans le fichier)
+
+
+PSEUDOELEMENT possible de mettre en seul :
+
+balise::first-line                      selectionner la premiere ligne
+{
+
+}
+
+balise::first-letter                    selectionner la premiere lettre
+{
+
+}
+
+balise::selection                   lors du surlignage avec la souris la couleur changeras
+{
+
+}
+
+balise::before                      ajouter un element devant premier enfant de l'element selectionner
+{
+
+}
+
+balise::after                       ajouter un element derriere dernier enfant de l'element sélectionner
+{
+    content: 'contenus';              rajoute du contenus
+    counter-increment: nomDuConpteur;               creer le compteur
+    content: counter(nomDuConpteur) ". ";              rajoute un compteur auto
+
+}
+
+balise baliseaselec::first-child                 selectionner le premier enfant de la balise
+{
+    counter-reset:nomDuCompter;                     reset le compteur
+}
+
+balise baliseaselec::nth-child(nbre)                 selectionner le nbre enfant de la balise
+{
+
+}
+
+border-radius: 000;                 arrondis les bords (50% egale rond)
+
+content; attr(nomdata);             ajouter une valeur de data 
+
+scroll-behavior: smooth;            descendre a l'ancre de facon smooth en faisant défiler la page
+
+
+TRANSFORMATION  l'ordre a une importance
+
+transform:
+
+    translate(val1, val2);                  fait une translation
+
+    translatex()
+
+    translatey()
+
+    scale(val1, val2);                      rescale l'élement   si une valeur eglae la meme pour x et y
+
+    rotate(nbredeg     turn)                faire une rotation 1turn egale 360 degrer
+
+    skew(val1deg ; val2deg)                 decal en parrallélograme
+
+    skewx()
+
+    skewy()
+
+    sclae3d(0, 0, 0)
+
+    translate3D(0, 0, 0)
+
+    rorate3D(0 ,0 ,0)
+
+    perspective: valpx;                     sir ou est la cameras par rapport a l'écrant plus la persp est eloigner plus on a de la marge 
+
+    perspective-origin: top center right left;             definit l'axe
+
+    transform-orign: top right left center bottom;          définit l'axe de l'élement
+
+
+    ANIMATION et transition
+
+transition propriété transform du hover    temps de l'anim;             creer une transition sur la propriétée transform
+
+transition propriété a changer(color margin ...) temps de l'anim   temps d'attente avant de faire l'anim;           creer une animation avec un temps de retard
+
+transition color type d'animation  .5s;                     creer une transition sur la couleur de 0.5seconde avec une animation définie les animations sont creer par l'inspecteur dnas la catégorie css
+
+transition cubic-bezier( val1, val2, val2, val4)            est le plus souvent générer par le navigatuer
+
+transition temps                                            toutes les modifications serons animer
+
+@keyframes nom de l'anim
+{
+    from
+    {
+        propriéter de base                          creer une animation
+    }   
+    to
+    {   
+        propriéte a ateindre
+    }    
+    
+    ou
+
+    0%
+    {
+        propriéter de base
+    }
+
+    50%
+    {
+        propiéter au milieux de l'anim
+    }
+    100%
+    {
+        propriéte a ateindre
+    }
+
+}    
+
+
+animation: nom de l'anim temps en s   nbre de fois qu'elle doit etre jouer(infinite est jouer non stop)  reverse(inserse le sens de l'anim)  forwards(prend la valeur de fin) backwards(prend la valeur de debut) both(prend la valeur a laquel il est)                     a mettre dans la propriéte a animer sert a activer l'animation 
+
+animation-play-state: paused;                   arrete l'anim au survole
+
+@media screen(ecrant)   print(imprimente) only(sert a la compatibilité des ancients navigateurs)   (max min-width  100px), autre requete and autre requete encore
+{
+    .nomClass
+    {
+
+    }
+    .nomClass2
+    {
+
+    }
+}
+
+and         et
+
+not         condition inversé
+
+white-space: nowrap(ne va pas a la ligne)
+
+--nonvar: valeur;           les vars ne sont pas compatible sur IE
+
+element: var(--nomvar, val par defaut)             appelle de la variable   si var n'est pas définie il prendras celle par defaut   peuvent etre modifier avec le JS 

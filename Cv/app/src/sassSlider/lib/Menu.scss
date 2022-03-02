@@ -1,0 +1,133 @@
+ a{
+  color: $mainColor;
+  text-decoration: none;
+  position: relative;
+}
+
+nav h2{
+  @extend %hidden;
+}
+.MainMenu{
+  z-index: 1;
+  min-width: 100vw;
+  position: fixed;
+  top:0;
+  left: 0;
+  display: grid;
+  grid-template-areas: "nth menu";
+  grid-template-columns: 1fr 10fr;
+}
+//link hover animation
+.MainMenu__Links a:after {
+  content: "";
+  position: absolute;
+  min-width: 100%;
+  transform: scaleX(0);
+  min-height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $mainColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.MainMenu__Links a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.menu{
+  grid-area: menu;
+  padding-top: 2vh;
+  li{
+    display: inline-block;
+  }
+  :first-child{
+    width: 20vw;
+  }
+  li:not(:first-child) {
+    margin-left: 1vw;
+  }
+}
+
+.SubMenu{
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  top: 0;
+  div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: $MainbackgroundOpacity;
+  }
+  li{
+    display: inline-block;
+  }
+  label{
+    cursor: pointer;
+    z-index: 5;
+    margin-left: 1vw;
+    height: 20px;
+    width: 20px;
+  }
+  svg{
+    width: 20px;
+
+  }
+  input{
+    @extend %hidden;
+  }
+  input ~ div {
+    width: 0vw;
+    transition-duration: 1s;
+  }
+  input:checked ~ div {
+    transition-duration: 1s;
+    width: 100vw;
+    right: 0;
+  }
+  input ~ ul {
+    width: 0vw;
+    transition-duration: 1s;
+  }
+  input:checked ~ ul {
+    transition-duration: 1s;
+    width: 25vw;
+  }
+}
+.SubMenu__container{
+  padding: 6vh 4vw 0 4vw;
+  width: 15vw;
+  text-align: end;
+  .SubMenu__MainMenu{
+    @extend %hidden;
+  }
+}
+.list__container{
+  padding-top: 10vh;
+  background-color: $Mainbackground;
+  li{
+    display: block;
+    margin: 1vh 4vw;
+  }
+  li:after{
+    content: " ";
+    display: block;
+    width: 100%;
+    min-height: 1px;
+    background-color: $DarkGray;
+  }
+  a{
+    color: $mainColor;
+    transition-duration: 1s;
+  }
+  a:hover{
+    color: $Gray;
+    transition-duration: 1s;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}

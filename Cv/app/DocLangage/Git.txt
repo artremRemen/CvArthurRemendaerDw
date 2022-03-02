@@ -1,0 +1,53 @@
+un projet github contient tjrs a ca racine un readme.md
+
+wes bos terminal permet de modifier le terminal graphiquement
+
+gitignore.io        va creer le fichier gitignore afin de ne pas reprendre les fichiers inutiles 
+
+ls permet de savoir les dossiers et les fichier ce trouvant la ou l'on se situe
+
+cd /dossier    permet de choisir l'endroit ou l'on veut aller 
+
+mkdir nomDossier creer un dossier  
+
+open. va ouvrir le dossier dans lequel on ets 
+
+touch nomFichier    permet de creer un fichier
+
+open nomFichier     permet d'ouvrir le ficheir
+
+
+git status          donne le status des commits
+
+git init        initialise le projet
+
+git add nomfichier      ajout d'un fichier au commit(pardefaut aucun fichier n'est repris dans les commits)
+
+git add .       permet d'ajout tousles fichiers ajouter au projet ou les modifications
+
+git commit -m "initial commit"      lors du premier commit
+
+git commit -m"message du commit"   ajout d'un commit au projet      gitmoji.dev permet de savoir le format de nom de commit et donne des exemples
+
+git pull        envoyer le commit sur le PC
+
+dans github aller creer un repo et le nomer( il peut avoir un autre nom que le projet sur son ordi( pas conseiller))
+
+git remote add origine liendurepo       permet de lier le projet a git (origin est le remote name)
+
+git remote -v                           verifie si le lien est fait (vérifie le lien)
+
+git branch -m main      cree la branche main 
+
+git push                 implante le commit creer sur la branche
+
+git push origin MA_BRANCH               mplante le commit creer sur la branche voulue (main pour la branche primcipal)(origin est les remote name)  (si la commande met une erreur alors il faut metre -f avant le remote name)
+
+git branch nom_de_ma_branch_nouvelle        creer une nouvelle branch
+
+git checkout nom_de_ma_branch_nouvelle      passer sur la branche du nom donner 
+
+git rm nom_du_fichier                       suprimer un fichier
+
+
+ajouter une clé SSh sur github https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account

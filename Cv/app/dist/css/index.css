@@ -1,0 +1,1249 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: "D-DIN";
+  src: url(/fonts/D-DIN.ttf?10bb68ca7a7f3a2d66ecb454c54d0869);
+}
+::-moz-selection {
+  background: white;
+  color: black;
+}
+::selection {
+  background: white;
+  color: black;
+}
+
+.Download__Container input[id=Contact__MailInput], .Main__download h2, .Main__Projects h2, .Main__Subskills input, .Main__Subskills h2, .Main__Videos input, .SliderArticle__Title--hidden, .slider__Container thead, .Main__slider input, .Main__slider h2, .Main__about h2, .Main__Chiffres h2, .hidden, .SubMenu__container .SubMenu__MainMenu, .SubMenu input, nav h2 {
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  top: -500px;
+  left: 0px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.MainMenu {
+  z-index: 1;
+  min-width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-areas: "nth menu";
+  grid-template-columns: 1fr 10fr;
+}
+
+.MainMenu__Links a:after {
+  content: "";
+  position: absolute;
+  min-width: 100%;
+  transform: scaleX(0);
+  min-height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.MainMenu__Links a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu {
+  grid-area: menu;
+  padding-top: 2vh;
+}
+.menu li {
+  display: inline-block;
+}
+.menu :first-child {
+  width: 20vw;
+}
+.menu li:not(:first-child) {
+  margin-left: 1vw;
+}
+
+.SubMenu {
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.SubMenu div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.SubMenu li {
+  display: inline-block;
+}
+.SubMenu label {
+  cursor: pointer;
+  z-index: 5;
+  margin-left: 1vw;
+  height: 20px;
+  width: 20px;
+}
+.SubMenu svg {
+  width: 20px;
+}
+.SubMenu input ~ div {
+  width: 0vw;
+  transition-duration: 1s;
+}
+.SubMenu input:checked ~ div {
+  transition-duration: 1s;
+  width: 100vw;
+  right: 0;
+}
+.SubMenu input ~ ul {
+  width: 0vw;
+  transition-duration: 1s;
+}
+.SubMenu input:checked ~ ul {
+  transition-duration: 1s;
+  width: 25vw;
+}
+
+.SubMenu__container {
+  padding: 6vh 4vw 0 4vw;
+  width: 15vw;
+  text-align: end;
+}
+.list__container {
+  padding-top: 10vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+.list__container li {
+  display: block;
+  margin: 1vh 4vw;
+}
+.list__container li:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  min-height: 1px;
+  background-color: #252525;
+}
+.list__container a {
+  color: white;
+  transition-duration: 1s;
+}
+.list__container a:hover {
+  color: #868686;
+  transition-duration: 1s;
+}
+
+.Header__BG {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  pointer-events: none;
+}
+
+.Rocket {
+  -webkit-animation: Rocket 3s linear forwards;
+          animation: Rocket 3s linear forwards;
+}
+
+.Smoke {
+  transform-origin: bottom center;
+  -webkit-animation: smoke 2s linear forwards;
+          animation: smoke 2s linear forwards;
+}
+
+.Logos {
+  transform-origin: center;
+  -webkit-animation: Logos 4s linear forwards;
+          animation: Logos 4s linear forwards;
+}
+
+.Button__Image {
+  transform-origin: top left;
+  transform: scale(1, 1);
+  transition-duration: 1s;
+}
+
+.Button__Image:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 1s;
+}
+
+input ~ label .Button__Image__Path1 {
+  transform-origin: top left;
+  transform: rotate(0) scale(1, 1) translate(0%, 0%);
+  transition-duration: 1s;
+}
+
+input:checked ~ label .Button__Image__Path1 {
+  transform: rotate(33deg) scale(1.5, 1) translate(0%, -5%);
+  transition-duration: 1s;
+}
+
+input ~ label .Button__Image__Path2 {
+  transform-origin: center;
+  transform: scale(1, 1);
+  transition-duration: 1s;
+}
+
+input:checked ~ label .Button__Image__Path2 {
+  transform: scale(0, 1);
+  transition-duration: 1s;
+}
+
+input ~ label .Button__Image__Path3 {
+  transform-origin: bottom left;
+  transform: rotate(0) scale(1, 1) translate(0, 0);
+  transition-duration: 1s;
+}
+
+input:checked ~ label .Button__Image__Path3 {
+  transform: rotate(-33deg) scale(1.5, 1) translate(0%, 5%);
+  transition-duration: 1s;
+}
+
+@-webkit-keyframes Rocket {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes Rocket {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes Logos {
+  0% {
+    transform: scale(0, 0);
+  }
+  60% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes Logos {
+  0% {
+    transform: scale(0, 0);
+  }
+  60% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes smoke {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes smoke {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+input:checked + label {
+  color: white;
+  text-decoration: underline;
+}
+
+input[id=HTML] ~ div:nth-last-child(2) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: left top;
+  transition-duration: 2s;
+}
+
+input[id=SVG] ~ div:nth-last-child(1) article {
+  position: absolute;
+  background-color: none;
+  transform-origin: right top;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transition-duration: 2s;
+}
+
+input[id=HTML]:checked ~ div:nth-last-child(2) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=SVG]:checked ~ div:nth-last-child(1) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=CSS] ~ div:nth-last-child(2) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: left top;
+  transition-duration: 2s;
+}
+
+input[id=SASS] ~ div:nth-last-child(1) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: right top;
+  transition-duration: 2s;
+}
+
+input[id=CSS]:checked ~ div:nth-last-child(2) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=SASS]:checked ~ div:nth-last-child(1) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=Javascript] ~ div:nth-last-child(3) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: left top;
+  transition-duration: 2s;
+}
+
+input[id=Typescript] ~ div:nth-last-child(2) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: center top;
+  transition-duration: 2s;
+}
+
+input[id=NodeJs] ~ div:nth-last-child(1) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: right top;
+  transition-duration: 2s;
+}
+
+input[id=Javascript]:checked ~ div:nth-last-child(3) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=Typescript]:checked ~ div:nth-last-child(2) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=NodeJs]:checked ~ div:nth-last-child(1) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=PHP] ~ div:nth-last-child(2) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: left top;
+  transition-duration: 2s;
+}
+
+input[id=laravel] ~ div:nth-last-child(1) article {
+  position: absolute;
+  transform: scale(0, 0);
+  overflow: hidden;
+  transform-origin: right top;
+  transition-duration: 2s;
+}
+
+input[id=PHP]:checked ~ div:nth-last-child(2) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[id=laravel]:checked ~ div:nth-last-child(1) article {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+input[type=checkbox] ~ .Videos__videosPlayer {
+  height: 0;
+  transition-duration: 1s;
+}
+
+input[type=checkbox]:checked ~ .Videos__videosPlayer {
+  height: 100vh;
+  transition-duration: 1s;
+}
+
+input[id=patience] ~ div .patience {
+  transform: scale(0, 0);
+  transition-duration: 1s;
+  transform-origin: left top;
+}
+
+input[id=patience]:checked ~ div .patience {
+  transform: scale(1, 1);
+  transition-duration: 1s;
+}
+
+input[id=determination] ~ div .determination {
+  transform-origin: center top;
+  transform: scale(0, 0);
+  transition-duration: 1s;
+}
+
+input[id=determination]:checked ~ div .determination {
+  transform: scale(1, 1);
+  transition-duration: 1s;
+}
+
+input[id=search] ~ div .search {
+  transform-origin: right top;
+  transform: scale(0, 0);
+  transition-duration: 1s;
+}
+
+input[id=search]:checked ~ div .search {
+  transform: scale(1, 1);
+  transition-duration: 1s;
+}
+
+.Main__download input:checked + label {
+  text-decoration: none;
+  color: black;
+  /*trasition effect for background*/
+  background-position: 100% 100%;
+}
+.Main__download input ~ form {
+  transform: scale(0, 0);
+  transform-origin: bottom;
+  transition-duration: 2s;
+}
+.Main__download input:checked ~ form {
+  transform: scale(1, 1);
+  transition-duration: 2s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+header .Header__Title {
+  grid-column: 2;
+  grid-row: 2;
+  z-index: 1;
+  grid-row: 2;
+  grid-column: 2;
+  text-align: center;
+}
+header h1 {
+  font-size: 3.12em;
+}
+
+.Header__BG {
+  transform-origin: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+
+.st0 {
+  fill: none;
+  stroke: white;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+.st6 {
+  fill: white;
+}
+
+.Main__Chiffres {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 30vh;
+  align-content: center;
+}
+.Main__Chiffres div {
+  text-align: center;
+}
+.Main__Chiffres div div:first-child {
+  font-size: 8.75em;
+}
+.Main__Chiffres div div:last-child {
+  margin-bottom: 2vh;
+  font-size: 1.375em;
+}
+
+.Main__about {
+  position: relative;
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  align-content: center;
+  background-image: url("/src/img/images.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Main__about p {
+  z-index: 2;
+  width: 50vw;
+  position: absolute;
+  top: 35vh;
+  padding-left: 10vw;
+}
+
+.Canvas__About {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0vh;
+  left: 0vw;
+}
+
+.Main__slider {
+  min-height: 100vh;
+}
+.Main__slider div > p:first-child {
+  font-size: 1.25em;
+}
+.Main__slider div > p:nth-child(2) {
+  font-size: 3em;
+}
+.Main__slider label {
+  cursor: pointer;
+  padding: 0 1vw;
+  border-left: solid #868686 2px;
+}
+.Main__slider div label:nth-child(4) {
+  padding: 0 1vw 0 0;
+  border: none;
+}
+
+.slider__Container {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  max-width: 100vw;
+  height: 100vh;
+  left: 0vw;
+  display: block;
+  width: 50vw;
+  padding: 30vh 10vw 0 10vw;
+  transform: scale(1, 1);
+  transition: 2s;
+}
+.slider__Container table {
+  display: block;
+}
+.slider__Container tbody {
+  display: block;
+}
+.slider__Container tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: #868686 solid 1px;
+}
+.slider__Container tr th {
+  padding: 2vh 0 2vh 0;
+  font-size: 0.875em;
+}
+.slider__Container tr th:first-child {
+  padding: 2vh 0 1vh 0;
+  font-size: 0.875em;
+}
+.slider__Container tr th:first-child {
+  justify-self: start;
+}
+.slider__Container tr th:last-child {
+  justify-self: end;
+}
+
+.Slider__percent {
+  color: #868686;
+}
+
+.canvas {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Main__slider {
+  position: relative;
+}
+
+.Container--Before {
+  left: 100vw;
+  transform: scale(0, 1);
+}
+
+.Container--after {
+  transform: scale(0, 1);
+  left: -100vw;
+}
+
+.SliderLeft, .SliderRight {
+  z-index: 2;
+  cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  bottom: 3vh;
+}
+
+.SliderLeft, .SliderRight {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  transition-duration: 1s;
+  border-radius: 50%;
+}
+
+.SliderLeft:hover, .SliderRight:hover {
+  width: 3.5vw;
+  height: 3.5vw;
+  position: absolute;
+  transition-duration: 1s;
+}
+
+.SliderLeft {
+  left: 3vw;
+  background: #868686 url("/src/img/LeftArrow.svg") center center no-repeat;
+}
+
+.SliderRight {
+  right: 3vw;
+  background: #868686 url("/src/img/RightArrow.svg") center center no-repeat;
+}
+
+.sliderdesable {
+  background: #252525 url("/src/img/RightArrow.svg") center center no-repeat;
+}
+
+.slider__Buttons {
+  position: absolute;
+  width: 1vw;
+  bottom: 3vh;
+  width: 50vw;
+  right: 25vw;
+  text-align: center;
+  display: inline-block;
+}
+.slider__Buttons div {
+  cursor: pointer;
+  display: inline-block;
+  width: 0.75vw;
+  height: 0.75vw;
+  margin: 0 1vw;
+  background-color: white;
+  border-radius: 100%;
+  transition-duration: 1s;
+}
+.slider__Buttons .button--Active {
+  width: 1vw;
+  height: 1vw;
+  margin: 0 0.95vw;
+  transition-duration: 1s;
+}
+.slider__Buttons div:hover {
+  width: 1.2vw;
+  height: 1.2vw;
+  margin: 0 0.75vw;
+  transition-duration: 1s;
+}
+
+.Videos__container {
+  display: grid;
+  grid-template-areas: "nth nth2 nth3" "nth Player nth3" "text text text";
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Main__Videos {
+  position: relative;
+  height: 100vh;
+  background: url("/src/img/Offline.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.Main__Videos h2 {
+  font-size: 1.25em;
+}
+.Main__Videos p {
+  font-size: 3em;
+}
+.Video__Container--resize {
+  padding: 0 0 0 10vw;
+  grid-area: text;
+}
+
+.Container__showPlayer {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Videos__PlayerButton {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  grid-area: Player;
+  place-self: baseline;
+}
+.Videos__PlayerButton svg {
+  position: absolute;
+  top: 12VH;
+  left: 35%;
+}
+
+.Videos__videosPlayer {
+  z-index: 5;
+  overflow: hidden;
+  position: absolute;
+  display: grid;
+  grid-template-areas: "nth nth close" "nth2 player nth3" "nth4 text nth5";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: black;
+}
+.Videos__videosPlayer iframe {
+  grid-area: player;
+}
+.Videos__videosPlayer p {
+  grid-area: text;
+  margin-top: 2vh;
+  justify-self: center;
+  font-size: 1em;
+}
+.Videos__videosPlayer label {
+  cursor: pointer;
+  grid-area: close;
+  margin: 3vw 3vw 0 0;
+  width: 5vw;
+  height: 5vw;
+  justify-self: end;
+}
+.Videos__videosPlayer svg {
+  width: 100%;
+}
+
+.Main__Subskills {
+  width: 100vw;
+  height: 100vh;
+}
+.Main__Subskills p {
+  width: 100%;
+}
+.Main__Subskills p:first-of-type {
+  font-size: 1.25em;
+  padding-bottom: 5vh;
+}
+.Main__Subskills label {
+  grid-area: label;
+  color: #868686;
+  padding: 0 1vw;
+  border-left: solid #868686 2px;
+  text-decoration: none;
+}
+.Main__Subskills div {
+  text-align: left;
+  position: relative;
+}
+.Main__Subskills label:first-of-type {
+  padding-left: 0;
+  border: none;
+}
+.Main__Subskills input:checked + label {
+  color: white;
+  text-decoration: none;
+}
+
+.Subskills__Cat {
+  padding: 35vh 0 0 11vh;
+  width: 40vw;
+}
+
+.Subskills__content {
+  padding-top: 3vh;
+  position: absolute;
+  top: 0;
+}
+
+.Main__Projects {
+  min-height: 100vh;
+  position: relative;
+}
+.Main__Projects div {
+  max-height: 100vh;
+}
+.Main__Projects a {
+  overflow: hidden;
+  display: block;
+  height: 90vh;
+}
+.Main__Projects img {
+  max-width: 100%;
+}
+.Main__Projects p {
+  padding-top: 4vh;
+  text-align: center;
+}
+
+.SliderProject {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  max-width: 100vw;
+  height: 100vh;
+  left: 0vw;
+  display: block;
+  transform: scale(1, 1);
+  transition: 2s;
+}
+
+.Main__download div[class=line] {
+  margin: 10vh 0 3vh 0;
+  width: 50vw;
+  height: 15vh;
+  border-right: solid white 2px;
+}
+.Main__download p {
+  text-align: center;
+  color: #868686;
+}
+.Main__download p span {
+  color: white;
+}
+
+.Main__download {
+  height: 50vh;
+}
+
+.Download__Container {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+}
+.Download__Container form {
+  position: absolute;
+  bottom: 0;
+  left: 12.5vw;
+  width: 75vw;
+  max-height: 50vh;
+  background-color: #252525;
+  padding: 2vw;
+  border-radius: 2vw;
+  margin-bottom: 2vh;
+}
+.Download__Container a {
+  display: inline-block;
+  width: 15vw;
+  border: solid white 2px;
+  padding: 2vh 1vw;
+  margin-top: 5vh;
+  background: linear-gradient(black, black 50%, white 50%, white);
+  background-size: 100% 200%;
+  transition: background 0.5s;
+}
+.Download__Container a:hover, .Download__Container label:hover {
+  color: black;
+  /*trasition effect for background*/
+  background-position: 100% 100%;
+}
+.Download__Container a {
+  margin-right: 0.5vw;
+}
+.Download__Container label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.Download__FormButton {
+  display: inline-block;
+  width: 15vw;
+  border: solid white 2px;
+  padding: 2vh 1vw;
+  margin-top: 5vh;
+  background: linear-gradient(black, black 50%, white 50%, white);
+  background-size: 100% 200%;
+  transition: background 0.5s;
+}
+
+.contactForm {
+  text-align: end;
+}
+.contactForm fieldset {
+  display: grid;
+  grid-template-areas: "name mail bio" "nth nth2 bio" "nth sub bio";
+}
+.contactForm label {
+  cursor: pointer;
+  margin: 1vw 1vw 0 0;
+  width: 2vw;
+  height: 2vw;
+}
+.contactForm fieldset label {
+  color: white;
+  transition-duration: 1s;
+}
+.contactForm fieldset label:hover {
+  color: #868686;
+  transition-duration: 1s;
+}
+.contactForm svg {
+  width: 198%;
+}
+.contactForm input[type=submit] {
+  grid-area: sub;
+  margin-bottom: 5vh;
+}
+.contactForm div label, .contactForm div input {
+  display: block;
+}
+.contactForm div input {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5vh;
+}
+.contactForm textarea {
+  width: 80%;
+  height: 10vh;
+  margin-right: 10%;
+}
+.contactForm div label {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2vh;
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.Form__Name {
+  grid-area: name;
+}
+
+.Form__Mail {
+  grid-area: mail;
+}
+
+.Form__Message {
+  grid-area: bio;
+}
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+footer p, footer ul, footer li {
+  display: inline-block;
+}
+footer p {
+  color: #868686;
+}
+footer a {
+  margin-left: 2vw;
+  transition-duration: 1s;
+}
+footer a:hover {
+  color: #868686;
+  transition-duration: 1s;
+}
+
+.Container--Before {
+  left: 100vw;
+  transition: 2s;
+}
+
+.Container--after {
+  left: -100vw;
+  transition: 2s;
+}
+
+@media screen and (max-width: 960px) {
+  .MainMenu {
+    display: block;
+  }
+
+  .MainMenu__Links {
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    top: -500px;
+    left: 0px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .menu :first-child {
+    display: block;
+    width: 100%;
+  }
+  .menu :first-child a {
+    width: 40%;
+    margin: auto;
+  }
+
+  .SubMenu label {
+    margin-right: 6vw;
+  }
+  .SubMenu input:checked ~ ul {
+    transition-duration: 1s;
+    width: 50vw;
+  }
+
+  .SubMenu__container {
+    width: 25vw;
+  }
+
+  .SubMenu__container .SubMenu__MainMenu {
+    position: initial;
+    visibility: visible;
+    width: initial;
+    height: initial;
+    display: block;
+    margin: 3vh 10vw 3vh 6vw;
+  }
+
+  .list__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+  }
+  .list__container li {
+    display: block;
+    margin: 3vh 10vw 3vh 6vw;
+  }
+  .list__container li:after {
+    content: " ";
+    display: block;
+    width: auto;
+    min-height: 1px;
+    background-color: #252525;
+  }
+  .list__container a {
+    color: white;
+    transition-duration: 0.5s;
+  }
+  .list__container a:hover {
+    color: #868686;
+    transition-duration: 0.5s;
+  }
+
+  .Main__Chiffres div div:first-child {
+    font-size: 5em;
+  }
+  .Main__Chiffres div div:last-child {
+    font-size: 1em;
+  }
+
+  .Main__about p {
+    width: 100vw;
+  }
+
+  .Slider__Container--resize {
+    width: 100vw;
+  }
+
+  .Subskills__Cat {
+    width: 100vw;
+  }
+
+  .Main__download a {
+    width: 80vw;
+  }
+
+  .Download__Container .Download__FormButton {
+    margin: auto;
+    margin-top: 2vh;
+    width: 80vw;
+    display: block;
+  }
+
+  .Download__Container form {
+    display: block;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 0;
+    padding-bottom: 57vh;
+  }
+
+  .contactForm .Contact__Mailoutput {
+    cursor: pointer;
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    right: 2vh;
+    top: 2vh;
+  }
+  .contactForm .Contact__Mailoutput svg {
+    width: 198%;
+  }
+
+  .contactForm fieldset {
+    display: block;
+    margin-top: 10vh;
+  }
+  .contactForm div {
+    display: block;
+  }
+  .contactForm div input {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2vh;
+  }
+  .contactForm div label {
+    margin-top: 2vh;
+  }
+  .contactForm input[type=submit] {
+    margin: auto;
+    width: 80%;
+    margin-right: 10%;
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+  }
+}

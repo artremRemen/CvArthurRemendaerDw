@@ -1,0 +1,218 @@
+{
+    "menu": {
+        "about": {
+            "name": "about",
+            "link": "#about",
+            "title": "All about me"
+        },
+        "Skills": {
+            "name": "Skills",
+            "link": "#skills",
+            "title": "My main skills"
+        },
+        "subskills": {
+            "name": "Videos",
+            "link": "#videos",
+            "title": "my in videos"
+        },
+        "video": {
+            "name": "SubSkills",
+            "link": "#subskills",
+            "title": "All about my subskills"
+        },
+        "projects": {
+            "name": "Projects",
+            "link": "#Projects",
+            "title": "somme projects"
+        },
+        "portfolio": {
+            "name": "portfolio",
+            "link": "#",
+            "title": "Go to my portfolio "
+        }
+    },
+    "slider": {
+        "slider1": {
+            "Overview": {
+                "langage": {
+                    "HTML": {
+                        "name": "HTML",
+                        "skill": "90"
+                    },
+                    "CSS": {
+                        "name": "CSS",
+                        "skill": "75"
+                    },
+                    "PHP": {
+                        "name": "PHP",
+                        "skill": "50"
+                    },
+                    "Js": {
+                        "name": "Javascipt",
+                        "skill": "80"
+                    },
+                    "Ts": {
+                        "name": "Typescript",
+                        "skill": "30"
+                    },
+                    "Laravel": {
+                        "name": "Laravel",
+                        "skill": "10"
+                    }
+                }
+            },
+            "HTML": {
+                "content": {
+                    "html": {
+                        "subtitle": ["HTML","SVG"],
+                        "img": "Slider/html",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": true
+                    },
+                    "svg": {
+                        "img": "Slider/svg",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": false
+                    }
+                }
+            },
+            "CSS": {
+                "content": {
+                    "CSS": {
+                        "subtitle": ["CSS","SASS"],
+                        "img": "Slider/css",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": true
+                    },
+                    "sass": {
+                        "img": "Slider/sass",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": false
+                    }
+                }
+            },
+            "Javascript": {
+                "content": {
+                    "Js": {
+                        "subtitle": ["Javascript","Typescript", "NodeJs"],
+                        "img": "Slider/js",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": true
+                    },
+                    "Ts": {
+                        "img": "Slider/ts",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": false
+                    },
+                    "NJ": {
+                        "img": "Slider/nodejs",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": false
+                    }
+                }
+            },
+            "PHP": {
+                "content": {
+                    "php": {
+                        "subtitle": ["PHP","laravel"],
+                        "img": "Slider/php",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": true
+                    },
+                    "laravel": {
+                        "img": "Slider/laravel",
+                        "alt": "description Img",
+                        "ImgWidth": "100",
+                        "ImgHeight": "100",
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
+                        "canvas": false
+                    }
+                }
+            }
+        }
+
+    },
+    "subskills":{
+        "patience":"2 mots sur la patience",
+        "determination":"2 mots sur la perseverance",
+        "search":"2 mots sur la recherche"
+    },
+    "projects": {
+        "Rezip": {
+            "img": "Projects/render.jpeg",
+            "alt": "Render of Volvo interior",
+            "ImgWidth": "1852",
+            "ImgHeight": "935",
+            "link": "",
+            "description": "Render of Volvo EC380 EL interior"
+        },
+        "tgp": {
+            "img": "Projects/tgp.png",
+            "alt": "Render of Volvo EC 380 EL TGP 3D model",
+            "ImgWidth": "1920",
+            "ImgHeight": "1080",
+            "link": "",
+            "description": "Personnal project of Volvo EC 380 El TGP"
+        },
+        "Travado": {
+            "img": "Projects/PosteCommande.png",
+            "alt": "Render of TGP interior",
+            "ImgWidth": "1920",
+            "ImgHeight": "1080",
+            "link": "",
+            "description": "Command of Volvo excavator"
+        }
+
+    },
+    "socials": {
+        "Art": {
+            "name": "ArtStation",
+            "link": "https://www.artstation.com/artrem",
+            "title": "Visit my Artstation for my 3D projects"
+        },
+        "fb": {
+            "name": "Facebook",
+            "link": "https://www.facebook.com/Artrem3W-101481668855899",
+            "title": "Visit my facebook page for see my other projects"
+        },
+        "ig": {
+            "name": "Instagram",
+            "link": "https://www.instagram.com/artrem3dweb/?hl=fr",
+            "title": "Visit my instagram for see my mains projects"
+        },
+        "GH": {
+            "name": "gitHub",
+            "link": "https://github.com/artremRemen",
+            "title": "Visit my Git hub for pickup my codes lines "
+        },
+        "so": {
+            "name": "Stack overflow",
+            "link": "https://stackoverflow.com/users/17692179/artrem",
+            "title": "Visit my stack overflow for mesure my skill"
+        }
+    }
+}

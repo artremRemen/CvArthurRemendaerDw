@@ -1,0 +1,426 @@
+W3C:
+
+WhatWG: Web HyperText Application Technologie WorkingGroupe
+
+
+<balise>code</balise>		balise standar
+
+<balise/>					balsie orpheline
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        contenus des meta données
+    </head>
+    <body>          doit obligatoirement avoir un titre (peut etre mis dans le header)
+        contenus de la page 
+    </body>
+</html>
+
+
+<!--META DONNEES-->
+
+<meta charset="utf-8" />        encodage de la page
+
+<title>Titre</title>            titre de la page mis dans l'onglet
+
+<script></script>               balise servant a écrir le javascript
+
+<meta name="description" content="description dans le moteur de recherche"/>        description dans la recherche google
+
+<meta name="author" content="arthur remendaer"/>                                    auteur du site
+
+<meta name="keywords" content="mot clé,mot cle, mot cle"/>              pas utiliser sert a donner le theme de la page
+
+<link href="fichiercss" rel="stylesheet" media="screen    print"/>         media print pour impression screen pour PC    activer CSS 
+
+<link href="googlefont" rel="stylesheet" />                                 charger une police perso depuis googlefont
+
+<script type="text/javascript" src="chemin d'access"></script>              peut etre mis ici ou a la fin du body 
+
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>            ajout de la favicone    doit faire 64X64 
+
+<meta name="viewport" content="width=device-width"/>
+
+<meta name="MobileOptimized" content="width"/>
+
+<base href="./chemin">                                permet de définir la racine du site(le point de départ des chemins d'access au fichiers)
+
+<style type="text/css">         permet d'integrer du CSS directement dans la page
+    
+    contenus CSS
+</style>
+
+<noscript>              cree une alternative dans le cas ou le code JS ne serais pas lus par le navigateur
+    code
+</noscript>
+
+
+
+<!--BODY-->
+
+<!--SECTION-->
+
+<body>      définit la zone qui doit etre afficher par le navigateur la page du site(doit avoir un titre)
+    code
+</body>
+
+<header>    entete du site ne doit pas avoir de titre contient généralement le tire de la balise body
+    code
+</header>
+
+<main>      Contenus de la page(na pas besoint de titre)
+    code
+</main>
+
+<FOOTER>    Pied de page(na pas besoint de titre)
+    code
+</FOOTER>
+
+<section>
+    code
+</section>
+
+<nav>       menu du site(doit avoir un titre que l'on cacheras le plus souvent grace a CSS)
+    code
+</nav>
+
+<article> morceau de texte indépendant et autonome on doit pouvoir comprendre de quoi il sagis rien qu'en lisant ce texte(doit avoir un titre)
+    code
+</article>
+
+<aside>     donne des information annexe a l'article (doit avoir un titre)
+    code
+</aside>
+
+
+
+<!--ENTETE (HEADING) -->
+
+<h1>code</h1>        titre principale du site
+
+<h2>code</h2>       titre un peut moins principale
+
+<h3>code</h3>       titre moins principale
+
+<h4>code</h4>        titre pas principale
+
+<h5>code</h5>        sous titre
+
+<h6>code</h6>        sous sous titre
+
+<hgroup>    groupe de titre
+    code
+</hgroup>
+
+
+
+<!--PHRASING-->
+
+<a href="./chemin d'access du lien">lien</a>    "ancre" cree des liens vers d'autres site ou les page de ce site
+
+<abbr title="nom complet">code</abbr>           permet de définir les abbréviation 'acronyme' sans surcharger le texte et permet au navigteur de savoir se que c'est
+
+<dfn>text a définir</dfn>               dit que l'on définit le mot entre ces balises( la définition et le mot a définir ce situe dans un Paragraphe)
+
+<em>code</em>           définit au navigateur que ce mot est important
+
+<i>code</i>         dit au navigateur que de notre point de vue se mot est important
+
+<strong>code</strong>   dit au navigatuer que ce mot est super important
+
+<b>code</b>     dit au navigateur que l'on trouve que ce mot est super important
+
+<pre>code</pre>     preformate le code (garde les espace et les saut de ligne du ficher)
+
+<code>code</code>   sert a afficher un morceau de code(&lt;  pour afficher les "<"  et &rt; pour afficher les ">")
+
+<q>code</q>     cree une citation (genere des gillemet qui peuvent etre changer grace au CSS)
+
+<cite>code</cite>   donne la source de la citation
+
+<bdo dir='direction'>code</bdo> change le sens de lecture d'une partie de code(les sens sont: ltr et rtl)
+
+<samp>code</samp>       donne la sortie d'un programe (exp: error 404)
+
+<kbd>code</kbd>         texte qui doit etre entrer au clavier
+    
+<mark>code</mark>   "fluore" une partie du texte (pertinent au moment ou l'on lit ce texte)
+
+<u>code</u>         "DECONSEILLER"  sert a suligner une partie du texte (peut etre confondus avec un lien)
+
+<small>code</small>     information annexe que les gens ne doivent pas lire mais qui doit etre présente (exemple: copyright)    
+
+<sub>code</sub>         met du texte en indice (exemple le 2 de H2O)
+
+<sup>code</sup>         met un mot en exposant
+
+<var>code</var>         variable mathematique 
+
+<time datetime="dite pour le navigateur">code</time>       sert a définir une date l'attribut doit etre completer afin que le navigateur comprenne de quoi il sagis 
+
+</br>       sert a faire un saut a la ligne dans un texte (NE PAS UTILISER N'IMPORTE OU)
+
+<meter value="valeur de progression" max="valeur maximum a atteindre">code</meter>     cree une barre de progression
+
+<progress value="" max="">      cree une barre de chargement
+
+<span>code</span>       balise passe partout ne fait en HTML est surtout utiliser pour la CSS afin de styliser le codes
+
+
+
+<!--GroupeEmbeded-->
+
+<audio></audio>         integre une bande son
+
+<canvas></canvas>       cree un canvas en 2D ouvre une page pour dessinner dedant grace au JS et permet de les animer et interragir avec
+
+<embed></embed>         contenus générale de ce groupe (joker)
+
+<iframe src=""></iframe>    cree une frame a linterieur de la page(a éviter au maximum) ouvrir la page a l'interieur d'une autre.(utiliser juste pour Gmaps et encore)
+
+<img src="" alt="" srcset="ensemble d'image pour le responsive">                ajouter une image
+
+<math></math>       insere des equations
+
+<object></object>       peut utiliser 
+
+<svg></svg>             scalable vector graphiques: inserer des contenus svg dans le site 
+
+<video></video>         integrer des vidéos
+
+
+
+<!--interactive-->
+
+<a href=""></a>         cree un lien
+
+<audio></audio>         
+
+<button></button>       boutton d'envois
+
+<details></details>     genere une boite quo s'affiche en cliquant dessus pour donner des détails
+
+<embed></embed>
+
+<iframe src=""></iframe>
+
+<img src="">
+
+<input type="" name="">     cree unchamps de saisie dans un formulaire (controle de formulaire)
+
+(<keygen></keygen>)     
+
+<label></label>             etiquette qui va avec le champs
+
+<object></object>
+
+<select></select>           liste de selection(menus déroulant)
+
+<textarea></textarea>       cree des entree pour écrir du long text
+
+<video></video>
+
+
+
+<!--FLOW-->
+
+<hr>                        cree une ligne horizontale dans le nabigateurafin de partitionner la page pour séparer dex contenus
+
+<blockquote></blockquote>   cree un block de citation pareil que la balise "q" mais prend les grandes citations 
+
+<figure></figure>           image qui vien illustrer un texte
+
+<figcaption></figcaption>   légende de l'image se met dans figure
+
+<pre></pre>.        preformate le text
+
+<ol></ol>           liste désordonnée
+
+<ul></ul>           liste d"sordonée
+
+<li></li>           éléments des listes
+
+<del></del>         sert a baliser un text non valable mais on veut le laisser
+
+<ins></ins>         sert a inserer un nouveau morceau text dans le site
+
+
+
+<!--Balise de tableau-->
+
+<caption></caption>     resumer du contenus du tableau
+
+<table></table>         definit tous le tableau
+
+<tr></tr>               lignes du tableaux
+
+<th></th>               cellule d'entete du tableau
+
+<td></td>               cellule de donnée du tableau
+
+<thead></thead>         entete du tableau
+
+<tbody></tbody>         corp du tableau
+
+<tfoot></tfoot>         pied du tableau
+
+<col></col>
+
+<colgroup></colgroup>
+
+<!--formulaire-->
+
+<form>formulaire</form>                     creation du formulaire
+
+    methode="methode"                       methode POST(envois par variable) ou GET(envois dans le lien)
+    
+    action="page"                           ou le formulaire redirigeras 
+
+<fieldset>form</fieldset>                   regroupe les étapes de formulaire
+
+    <legend>legend</legend>                 met une légende au groupe
+
+<label>entree formulaire</label>            permet de selectionner l'entree par le text 
+
+    for="ID"                                lie le label a l'entree
+
+<input>                                     entree du formulaire
+
+    type=""                                 type d'entree du formulaire 
+
+        text                                entree standar
+
+        password                            entree mot de passe cache le texte
+
+        button                              entree bouton
+
+        checkbox                            entre case a cocher
+
+        radio                               entree case a cocher en rond sans possibiliter de décocher (une seul case a la fois )
+
+        color                               entree chois de couleur 
+
+        date                                entree formater pour les dates
+
+        datetime-local                      entree formater pour la date permet de la selectionner sans fusau horaire
+        
+        email                               entree email
+
+        file                                entree fichier 
+
+        hidden                              entree cacher a l'utilisateur
+
+        image                               bouton d'envois avec image attribut src="" obligatoire
+
+        mount                               entre de selection de mois et année 
+
+        number                              selection de nombre décimeaux
+
+        reset                               bouton permet de réinitialiser le formulaire 
+
+        search                              entree de recherche
+
+        submit                              bouton envois de donnée 
+
+        tel                                 entree numéros de telephone
+
+        time                                entree d'heure 
+        
+        URL                                 entre de site 
+
+        week                                entree de semaine par numéros
+        
+        
+
+
+
+    name=""                                 donne un nom a l'entree variable en backend
+
+    id=""                                   link le label a l'entree et sert en CSS 
+
+    value=""                                valeur envoyer a la confirmation de l'envois par défaut
+
+    checked                                 coche la case automatiquement (radio et checkbox)
+
+    placeholder                             donne un exemple a l'utilisateur se suprime des qu'il écrit
+
+    autocomplete=""                         désactiver la saisie auto des champs on active off désactiver 
+    
+    autofocus                               met le curseur dans le champs 
+
+    disable                                 désactive le champs pour éviter toute modification
+
+    maxlength                               nombre de caractere maximal par champs
+
+    minlength                               nombre de caractere minimum par champs
+
+
+    <!--ATTRIBUTS-->
+
+attr="val1 val2 val3 ..."		un attribut peut avoir plusieurs valeur
+
+lang=""    	sert a definir la langue choisie peut aller partout
+
+accesskey=""	touche d'access direct au clavier (permet de faire des rccourcis clavier personnaliser "rarement utiliser")
+
+class=""		sert a lier le code CSS au code HTML (Doit commencer par une lettre PAS d'espace et PAS de caractere speciaux)il existe un vocabulaire et une convention pour les nom de 					class(exp: bem)
+
+id=""			"NE PEUT ETRE MIS QU'UNE SEUL FOIS PAR PAGE" sert a lier le code CSS a la page et sert a aller a un endroit définit sur la page
+				grace au lien (exp: id="page" <a href="index.html#page">lien</a>) (Doit commencer par une lettre PAS d'espace et PAS de caractere speciaux)
+
+contextmenu=""		reference a un menu contextuel d'un element(rarement utiliser)
+
+contentedittable=""		si valeur est true on peut modifier l'élément
+
+data-...		utiliser en JS seert a récuperer des donnée pour JS a partir de l'élément HTML 
+
+dir=""			donne une direction de lecture (ltr gauche a droite rtl droite a ganche)
+
+draggable=""	true ou false si true permet de drag and drop un élément (pas supporter par tous les navigateurs)
+
+hiddent=""		(pas utile)
+
+tabindex="chiffre"		permet de changer lordre de tabulation dans le texte afin de diriger l'utilisateur vers un lien 	
+
+title=""				ajoute un titre descriptife lors que la souris survole la balise
+
+spellcheck=""			activation/desactivation de la correction orthographique
+
+style=""			permet d'ajouter du CSS a l'interieur de la balise (FORTEMENT DECONSEILLER)
+
+
+
+<!--_____________________LIENS________________________-->
+
+1.lien externe 
+
+2.lien interne 
+
+3.ancre nomée
+
+4.lien fichier
+
+5.lien email
+
+
+1.
+
+    https://www.google.com      url du site cible(google)   le s signifie que le site est sécuriser
+
+    hreflang=""     est conseiller
+
+    rel="external"      est un attribut qui signifie que le lien est externe
+
+
+
+2.
+
+    / partir de la racine du site (TRES MAUVAISE IDEE EXTREMENT DECONSEILLER)
+
+    ./  partir du chemin relatif du site            
+
+    ../ remonte dans le dossier parent
+
+    
+

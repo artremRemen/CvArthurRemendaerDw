@@ -1,0 +1,773 @@
+@import "./lib/reset.scss";
+@import "./lib/fonts.scss";
+@import "./lib/template.scss";
+@import "./lib/Menu.scss";
+@import "./lib/svgAnim.scss";
+@import "./lib/slider.scss";
+@import "./lib/Videos.scss";
+@import "./lib/subskills.scss";
+@import "./lib/download.scss";
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $Mainbackground;
+    color: $mainColor;
+    overflow-x: hidden;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+}
+.hidden{
+    @extend %hidden;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    .Header__Title {
+        grid-column: 2;
+        grid-row: 2;
+        z-index: 1;
+        grid-row: 2;
+        grid-column: 2;
+        text-align: center;
+    }
+    h1{
+        font-size: 3.12em;
+    }
+}
+.Header__BG{
+    transform-origin: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  box-sizing: content-box;
+    vertical-align: middle; 
+}
+//SVG Format
+.st0{fill:none;stroke:$mainColor;stroke-width:5;stroke-miterlimit:10;}
+.st6{fill:$mainColor;}
+
+//MAIN SECTION_____________________________________________________________________
+
+.Main__Chiffres{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    min-height: 30vh;
+    align-content: center;
+    h2{
+        @extend %hidden;
+    }
+    div{
+        text-align: center;
+        div:first-child{
+            font-size: 8.75em;
+        }
+        div:last-child{
+            margin-bottom: 2vh;
+            font-size: 1.375em;
+        }
+    }
+}
+
+//About ----------------------------------------
+
+.Main__about{
+    position: relative;
+    text-align: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    align-content: center;
+    background: {
+        image: url('/src/img/images.jpeg');
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    h2{
+        @extend %hidden;
+    }
+    p{
+        z-index: 2;
+        width: 50vw;
+        position: absolute;
+        top: 35vh;
+        padding-left: 10vw;
+    }
+}
+.Canvas__About{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0vh;
+    left: 0vw;
+}
+
+//Sldier ----------------------------------------
+
+.Main__slider
+{
+    div >p:first-child{
+        font-size:1.25em ;
+    }
+    div>p:nth-child(2){
+        font-size:3em ;
+    }
+    min-height: 100vh;
+    h2{
+        @extend %hidden;
+    }
+    input {
+        @extend %hidden;
+    }
+    label{
+        cursor: pointer;
+        padding: 0 1vw;
+        border-left: solid $Gray 2px;
+    }
+    div label:nth-child(4){
+        padding: 0 1vw 0 0;
+        border: none;
+    }
+    
+}
+.slider__Container{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    height: 100vh;
+    left:0vw;
+    display: block;
+    width: 50vw;
+    padding: 30vh 10vw 0 10vw;
+    transform: scale(1,1);
+    transition: 2s;
+    table{
+        display: block;
+    }
+    thead{
+        @extend %hidden;
+    }
+    tbody{
+        display: block;
+    }
+    tr{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        th{
+            padding: 2vh 0 2vh 0;
+            font-size: 0.875em;
+        }
+        th:first-child{
+            padding: 2vh 0 1vh 0;
+            font-size: 0.875em;
+        }
+        th:first-child{
+            justify-self: start;
+        }
+        th:last-child{
+            justify-self: end;
+        }
+        border-bottom: $Gray solid 1px;
+    }
+}
+.Slider__percent{
+    color: $Gray;
+    
+}
+.SliderArticle__Title--hidden{
+    @extend %hidden;
+}
+
+
+.canvas {
+    z-index: -1;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+//JS SLIDER _________________________________________________
+.Main__slider{
+    position: relative;
+}
+.Container--Before{
+    left:100vw;
+    transform: scale(0,1);
+}
+.Container--after{
+    transform: scale(0,1);
+    left:-100vw;
+}
+.SliderLeft, .SliderRight{
+    z-index: 2;
+    cursor: pointer;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    bottom: 3vh;
+}
+.SliderLeft, .SliderRight{
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    transition-duration: 1s;
+    border-radius: 50%;
+}
+.SliderLeft:hover, .SliderRight:hover{
+    width: 3.5vw;
+    height: 3.5vw;
+    position: absolute;
+    transition-duration: 1s;
+}
+.SliderLeft{
+    left:3vw;
+    background: $Gray url('/src/img/LeftArrow.svg') center center no-repeat;
+}
+.SliderRight{
+    right:3vw;
+    background: $Gray url('/src/img/RightArrow.svg') center center no-repeat;
+}
+.sliderdesable{
+    background: $DarkGray url('/src/img/RightArrow.svg') center center no-repeat;
+}
+
+.slider__Buttons{
+    position: absolute;
+    width:1vw;
+    bottom: 3vh;
+    width: 50vw;
+    right: 25vw;
+    text-align: center;
+    display: inline-block;
+    div{
+        cursor: pointer;
+        display: inline-block;
+        width: 0.75vw;
+        height: 0.75vw;
+        margin: 0 1vw;
+        background-color: $mainColor;
+        border-radius: 100%;
+        transition-duration: 1s;
+    }
+    .button--Active{
+        width: 1vw;
+        height: 1vw;
+        margin: 0 0.95vw;
+        transition-duration: 1s;
+    }
+    div:hover{
+        width: 1.2vw;
+        height: 1.2vw;
+        margin: 0 0.75vw;
+        transition-duration: 1s;
+    }
+}
+
+//Videos________________________________________________________________
+
+.Videos__container{
+    display: grid;
+    grid-template-areas: "nth nth2 nth3"
+                        "nth Player nth3"
+                        "text text text";
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Main__Videos{
+    position: relative;
+    height: 100vh;
+    background: url('/src/img/Offline.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    h2{
+        font-size: 1.25em;
+    }
+    p{
+        font-size:3em ;
+    }
+    
+    input{
+        @extend %hidden;
+    }
+}
+.Video__Container--resize{
+    padding: 0 0 0 10vw;
+    grid-area: text;
+}
+.Container__showPlayer{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.Videos__PlayerButton{
+    position: relative;
+    display:inline-block;
+    width: 100%;
+    grid-area: Player;
+    place-self: baseline;
+    svg{
+        position: absolute;
+        top:12VH;
+        left: 35%;
+    }
+    
+}
+.Videos__videosPlayer{
+    z-index: 5;
+    overflow: hidden;
+    position: absolute;
+    display: grid;
+    grid-template-areas: "nth nth close"
+                        "nth2 player nth3"
+                        "nth4 text nth5";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: $Mainbackground;
+    iframe{
+        grid-area: player;
+    }
+    p{
+        grid-area: text;
+        margin-top: 2vh;
+        justify-self: center;
+        font-size:1em;
+    }
+    label{
+        cursor: pointer;
+        grid-area: close;
+        margin: 3vw 3vw 0 0;
+        width: 5vw;
+        height: 5vw;
+        justify-self: end;
+    }
+    svg{
+        width: 100%
+    }
+}
+
+//Subskills________________________________________________________
+
+.Main__Subskills{
+    width: 100vw;
+    height: 100vh;
+    input, h2{
+        @extend %hidden;
+    }
+    p{
+        width: 100%;
+    }
+    p:first-of-type{
+        font-size: 1.25em;
+        padding-bottom: 5vh;
+    }
+    label{
+        grid-area: label;
+        color: $Gray;
+        padding: 0 1vw;
+        border-left: solid $Gray 2px;
+        text-decoration: none;
+    }
+    div{
+        text-align: left;
+        position: relative;
+    }
+    label:first-of-type{
+        padding-left:0;
+        border: none;
+    }
+    input:checked + label{
+        color: $mainColor;
+        text-decoration: none;
+    }
+}
+.Subskills__Cat{
+    padding: 35vh 0 0 11vh;
+    width: 40vw;
+}
+.Subskills__content{
+    padding-top: 3vh;
+    position: absolute;
+    top: 0;
+}
+
+
+//Projects__________________________________________________________________
+
+.Main__Projects{
+    min-height: 100vh;
+    position: relative;
+    h2{
+        @extend %hidden;
+    }
+    div{
+        max-height: 100vh;
+    }
+    a{
+        overflow: hidden;
+        display: block;
+        height:90vh;
+    }
+    img{
+        max-width: 100%;
+    }
+    p{
+        padding-top: 4vh;
+        text-align: center;
+    }
+}
+
+.SliderProject{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    height: 100vh;
+    left:0vw;
+    display: block;
+    transform: scale(1,1);
+    transition: 2s;
+}
+
+//Download___________________________________
+
+.Main__download{
+        h2{
+            @extend %hidden;
+        }
+        div[class='line']{
+            margin: 10vh 0 3vh 0;
+            width: 50vw;
+            height: 15vh;
+            border-right: solid $mainColor 2px;
+        }
+        p{
+            text-align: center;
+            color: $Gray;
+            span{
+                color: $mainColor;
+            }
+        }
+}
+.Main__download{
+    height: 50vh;
+}
+
+.Download__Container{
+    position: relative;
+    width: 100vw;
+    text-align: center;
+    input[id='Contact__MailInput']{
+        @extend %hidden;
+    }
+    form{
+        position: absolute;
+        bottom: 0;
+        left: 12.5vw;
+        width: 75vw;
+        max-height: 50vh;
+        background-color: $DarkGray;
+        padding: 2vw;
+        border-radius: 2vw;
+        margin-bottom: 2vh;
+    }
+    a{
+        display: inline-block;
+        width: 15vw;
+        border: solid $mainColor 2px;
+        padding: 2vh 1vw;
+        margin-top: 5vh;
+        background: linear-gradient($Mainbackground, $Mainbackground 50%, $mainColor 50%, $mainColor);
+        background-size: 100% 200%;
+        transition: background 0.5s;
+    }
+    a:hover, label:hover{
+        color: $Mainbackground;
+        /*trasition effect for background*/
+        background-position: 100% 100%;
+      
+    }
+    a{
+        margin-right: 0.5vw;
+    }
+    label{
+        cursor: pointer;
+        display: inline-block;
+
+    }
+}
+.Download__FormButton{
+    display: inline-block;
+    width: 15vw;
+    border: solid $mainColor 2px;
+    padding: 2vh 1vw;
+    margin-top: 5vh;
+    background: linear-gradient($Mainbackground, $Mainbackground 50%, $mainColor 50%, $mainColor);
+    background-size: 100% 200%;
+    transition: background 0.5s;
+}
+.contactForm{
+    text-align: end;
+    fieldset{
+        display: grid;
+        grid-template-areas:"name mail bio"
+                            "nth nth2 bio"
+                            "nth sub bio" ;
+
+    }
+    label{
+        cursor: pointer;
+        margin: 1vw 1vw 0 0;
+        width: 2vw;
+        height: 2vw;
+    }
+    fieldset label{
+        color: $mainColor;
+        transition-duration: 1s;
+    }
+    fieldset label:hover{
+        color: $Gray;
+        transition-duration: 1s;
+    }
+    svg{
+        width: 198%
+    }
+    input[type='submit']{
+        grid-area: sub;
+        margin-bottom: 5vh;
+    }
+    div label, div input{
+        display: block;
+    }
+    div input{
+        width:80%;
+        margin: auto;
+        margin-bottom: 5vh;
+    }
+    textarea{
+        width: 80%;
+        height: 10vh;
+        margin-right: 10%;
+    }
+    div label{
+        height: fit-content;
+        width:80%;
+        margin: auto;
+        margin-bottom: 2vh;
+        margin-top: 5vh;
+        text-align: center;
+    }
+}
+.Form__Name{
+    grid-area: name;
+}
+.Form__Mail{
+    grid-area: mail;
+}
+.Form__Message{
+    grid-area: bio;
+}
+//Footer___________________________________
+footer{
+    font-size: 0.75em;
+    text-align: center;
+    padding-bottom: 5vh;
+    p, ul, li{
+        display: inline-block;
+    }
+    p{
+        color: $Gray;
+    }
+    a{
+        margin-left: 2vw;
+        transition-duration: 1s;
+    }
+    a:hover{
+        color: $Gray;
+        transition-duration: 1s;
+      }
+}
+
+//JS SLIDER _________________________________________________
+
+
+.Container--Before{
+    left:100vw;
+    transition: 2s;
+}
+.Container--after{
+    left:-100vw;
+    transition: 2s;
+}
+
+
+@media screen and (max-width:960px) {
+    .MainMenu{
+        display: block;
+    }
+    .MainMenu__Links{
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+        top:-500px;
+        left:0px;
+        padding: 0;
+        margin: -1px;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+    .menu :first-child{
+        display: block;
+        width: 100%;
+        a{
+            width: 40%;
+            margin: auto;
+        }
+    }
+    .SubMenu{
+        label{
+          margin-right: 6vw;
+        }
+        
+        input:checked ~ ul {
+            transition-duration: 1s;
+            width: 50vw;
+        }
+    }
+    .SubMenu__container{
+        width: 25vw;
+      }
+    .SubMenu__container .SubMenu__MainMenu{
+        position: initial;
+        visibility: visible;
+        width: initial;
+        height: initial;
+        display: block;
+        margin: 3vh 10vw 3vh 6vw;
+    }
+    .list__container{
+        li{
+          display: block;
+          margin: 3vh 10vw 3vh 6vw;
+        }
+        li:after{
+          content: " ";
+          display: block;
+          width: auto;
+          min-height: 1px;
+          background-color: $DarkGray;
+        }
+        a {
+          color: $mainColor;
+          transition-duration: 0.5s;
+        }
+        a:hover {
+          color: $Gray;
+          transition-duration: 0.5s;
+        }
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+      }
+
+
+    .Main__Chiffres{
+        div{
+            div:first-child{
+                font-size: 5em;
+            }
+            div:last-child{
+                font-size: 1em;
+            }
+        }
+    }
+    .Main__about{
+        p{
+            width: 100vw;
+        }
+    }
+    .Slider__Container--resize{
+        width: 100vw;
+    }
+    .Subskills__Cat {
+        width: 100vw;
+    }
+    .Main__download{
+        a{
+            width: 80vw;
+        }
+    }
+    .Download__Container .Download__FormButton{
+        margin: auto;
+        margin-top: 2vh;
+        width: 80vw;
+        display: block;
+    }
+
+    .Download__Container{
+        form{
+            display: block;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            margin-bottom: 0;
+            padding-bottom: 57vh;
+        }
+    }
+    .contactForm .Contact__Mailoutput{
+        cursor: pointer;
+        position: absolute;
+        width: 5vh;
+        height: 5vh;
+        right:2vh;
+        top: 2vh;
+        svg{
+            width: 198%
+        }
+    }
+    .contactForm{
+        fieldset{
+            display: block;
+            margin-top: 10vh;
+        }
+        div{
+            display: block;
+        }
+        div input{
+            width:80%;
+            margin: auto;
+            margin-bottom: 2vh;
+        }
+        div label{
+            margin-top: 2vh;
+        }
+        input[type='submit']{
+            margin: auto;
+            width: 80%;
+            margin-right: 10%;
+            margin-bottom: 3vh;
+            margin-top: 2vh;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+//installation er preprocessing
+
+/*
+    https://github.com/sass/dart-sass/releases/tag/1.49.7             archive a DL
+    .\dart-sass\sass --help             va donner les aides sur sur le compilleur
+    .\dart-sass\sass pathinput.scss pathoutput.css          va convertir un scss en css
+
+    .\dart-sass\sass --watch sass/index.scss dist/css/index.css     va convertir un scss en css avec autoreload
+
+*/
+
+@import "file"; // importer un fichier afin d'integrer le code a ce fichier
+$variable: rgba(0 0 0 0); //variable        possibilité de les additionner avec des valeurs ou entre elles ($variable + 10px)  si on additionne la variable dont ca valeur ne contient pas d'unité avec elle prendras l'unité de lantre nombre  une variable utiliser dans un selecteur doit etre entourée de #{}
+$variable: rgba(0 0 0 0)!default; //définis comme valeur par défault si la variable n'est appeller nul part ailleur
+$list:val1,
+val2,
+val3; //list de valeurs 
+$list:val1 val1.1,
+val2 val2.2,
+val3 val3.3; //list de valeurs (chaque case contients deux valeurs) 
+%selecteur {
+    //il ne seras pas compiler et sert de template afin de les integrer dans les autres selecteurs grace a l'extend
+    color: white;
+}
+
+@if(condition) {}
+
+//ce fait a l'interieur du selecteur
+@else {}
+
+.link #{$variable} {
+    color: red;
+    background: {
+        //permet de ne pas devoir reecrir background a chaque fois 
+        color: #111;
+        repeat: no-repeat;
+    }
+    ;
+    &:hover {
+        color: green;
+    }
+    .child {
+        color: blue;
+    }
+}
+
+.classdeux {
+    @extend .class1; //permet de recuperer le style de la class 1 pour les integrer a la class deux
+}
+
+//va calculer la luminausité de la couleur selectionner
+@if(lightness($valeur)) {}
+
+@else {}
+
+@debug $variableOuFonction; //va donner le résultat le la fonction ou la variable qui le suit en console
+@for $i from start through end {
+    //va creer une boucle qui va ce repeter start valeur de départ et end valeur a atteindre
+}
+
+@each $element in $list {
+    //ba boucler la liste afin de donner chaques elements 
+    #{nth($element, 1)} {}
+    //si l'element contient plusieurs elements il va rechercher l'element indiquer en deuxieme paramettre  
+}
