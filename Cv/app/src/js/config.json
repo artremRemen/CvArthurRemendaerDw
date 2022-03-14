@@ -1,7 +1,7 @@
 {
     "menu": {
         "about": {
-            "name": "about",
+            "name": "About",
             "link": "#about",
             "title": "All about me"
         },
@@ -26,11 +26,12 @@
             "title": "somme projects"
         },
         "portfolio": {
-            "name": "portfolio",
+            "name": "Portfolio",
             "link": "#",
             "title": "Go to my portfolio "
         }
     },
+    "chiffre":[20, 42, 26],
     "slider": {
         "slider1": {
             "Overview": {
@@ -69,16 +70,14 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": true
+                        "content": "<span itemprop='name'>Arthur</span> learned <span itemprop='knowsLanguage'><abbr title='Hypertext Markup Language'>HTML</abbr></span> by himself and then improved his skills in courses at the high school of the province of Liege and allowed him to create cleaner code than before. He also learned a lot about <abbr title='Search Engine Optimisation'> SEO </abbr> which gives him the possibility to create websites that are well placed for google searches."
                     },
                     "svg": {
                         "img": "Slider/svg",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": false
+                        "content": "<span itemprop='name'>Arthur</span> learned the <span itemprop='knowsLanguage'><abbr title='Scalable Vector Graphics'>SVG</abbr></span> language in courses at the high school of the province of Liege for the most part even if he has already used some parts of the language before which allows him to easily animate an image and especially to create a site more user friendly, more <span itemprop='makesOffer'>responvie</span> and that requires less loading time to the user no matter the platform used"
                     }
                 }
             },
@@ -90,16 +89,14 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": true
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     },
                     "sass": {
                         "img": "Slider/sass",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": false
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     }
                 }
             },
@@ -111,24 +108,21 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": true
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     },
                     "Ts": {
                         "img": "Slider/ts",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": false
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     },
                     "NJ": {
                         "img": "Slider/nodejs",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": false
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     }
                 }
             },
@@ -140,16 +134,14 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": true
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     },
                     "laravel": {
                         "img": "Slider/laravel",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML",
-                        "canvas": false
+                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
                     }
                 }
             }
@@ -205,7 +197,7 @@
             "title": "Visit my instagram for see my mains projects"
         },
         "GH": {
-            "name": "gitHub",
+            "name": "GitHub",
             "link": "https://github.com/artremRemen",
             "title": "Visit my Git hub for pickup my codes lines "
         },

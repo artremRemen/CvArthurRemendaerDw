@@ -5,7 +5,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,9 +16,10 @@
         <link rel="stylesheet" href="./dist/css/index.css">
         <title>Cv d'Arthur Remendaer</title>
     </head>
-
-    <body itemscope itemtype='https://schema.org/CreativeWork'>
+    
+    <body itemscope itemtype='https://schema.org/Person'>
         <header>
+            <p class='warning'>Work in progress. / Copy site of spaceX for school work</p>
             <svg class='Header__BG' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 1920 1080" xml:space="preserve">
                 <g class="Rocket">
@@ -91,8 +91,8 @@
                 <rect x="0" y="0" width="1920" height="1080" fill='000000' fill-opacity="0.25"/>
             </svg>
             <div class='Header__Title'>
-                <h1 itemprop='author' ><span itemtype='https://schema.org/Person'><span itemprop='name'>ARTHUR</span> <span itemprop='familyName'>REMENDAER</span></span></h1>
-                <p>Developer web fullstack</p>
+                <h1><span itemprop='name'>ARTHUR</span> <span itemprop='familyName'>REMENDAER</span></h1>
+                <p><span itemprop='jobTitle'>Web develloper </span > and <span itemprop='jobTitle'>designer</span> full stack</p>
             </div>
             <nav class='MainMenu'>
                 <h2>Menu de navigation</h2>
@@ -123,7 +123,7 @@
                 <ul class='SubMenu__container'>
                     <li class='MainMenu__Links'><a href="" title="" >Shop</a></li>
                     <li>
-                        <input class='SubMenu__input' id='SubMenu__Button' name="SubMenu__Button" type='checkbox' />
+                        <input class='SubMenu__input' tabindex="-1" id='SubMenu__Button' tabindex="-1" name="SubMenu__Button" type='checkbox' />
                         <div></div>
                         <ul class='list__container'>
                             <?php 
@@ -157,15 +157,17 @@
         <main>
             <section class='Main__Chiffres'>
                 <h2>quelques chiffres</h2>
-                <div><div>133</div> <div>total launchs</div> </div>
-                <div><div>87</div> <div>total landing</div> </div>
-                <div><div>59</div> <div>reflown rocket</div> </div>
+                <div><div class='Chiffres'>0</div> <div>3D MODELS</div> </div>
+                <div><div class='Chiffres'>0</div> <div>WEB SITES</div> </div>
+                <div><div class='Chiffres'>0</div> <div>PUBLICS PROJECTS</div> </div>
             </section >
             <section class='Main__about' id='about'>
                 <h2>description</h2>
-                <div class='Canvas__About'></div>
-                <p itemprop='description'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti eos maiores laborum ea consequatur soluta alias harum consectetur natus ipsa excepturi culpa, rem aliquam eius totam, error dolores minus?
+                <canvas class='Canvas__About'>
+
+                </canvas>
+                <p itemprop='description' itemprop='makesOffer'>
+                Arthur Remendaer is a young self-taught <span itemprop='jobTitle'>web developer</span> and able to evolve in all circumstances that it is <span itemprop='jobTitle'>front-end</span> and <span itemprop='jobTitle'>back-end</span>. He has in addition to his studies of <span itemprop='jobTitle'>web development</span> refine his abilities in the field of <span itemprop='makesOffer'>3D modeling</span> to be able to integrate some of its model to the sites he creates if necessary, without forgetting the fact that with his diploma of electrician he is able to detect most of the problems of computers and to solve them.
                 </p>
             </section >
             <section class='Main__slider' id="skills">
@@ -173,7 +175,7 @@
                 <?php foreach(CONFIG['slider']['slider1'] as $sliderKey =>$SliderElement): 
                 ?> 
                         <div class="slider__Container">
-                                <p>Arthur remendaer</p>
+                                <p itemprop='name'>Arthur remendaer</p>
                                 <p><?= $sliderKey ?></p>
                                 <?php
                                     if ($sliderKey === 'Overview'):
@@ -203,13 +205,13 @@
                                 <?php else: ?>
                                 <?php 
                                     foreach($SliderElement['content'] as $sliderContentKey =>$sliderContent):
-                                        if($sliderContent['canvas']): ?>
-                                        <div class='canvas <?= $sliderKey  ?>'></div>
+                                        if($sliderContent['content']): ?>
+                                        <canvas class='canvas <?= $sliderKey  ?>'></canvas>
                                         <?php endif; 
-                                        if ($sliderContent["subtitle"]) {
+                                        if (isset($sliderContent["subtitle"])) {
                                             for ($i=0; $i < count($sliderContent["subtitle"]); $i++):
                                                 ?>
-                                                    <input type="radio" id="<?= $sliderContent["subtitle"][$i] ?>" name="<?= $sliderKey  ?>" <?php if ($i === 0){ echo "checked";}?>>
+                                                    <input type="radio" tabindex="-1" id="<?= $sliderContent["subtitle"][$i] ?>" name="<?= $sliderKey  ?>" <?php if ($i === 0){ echo "checked";}?>>
                                                     <label for="<?= $sliderContent["subtitle"][$i] ?>"><?= $sliderContent["subtitle"][$i] ?></label>
                                                 <?php
                                             endfor;
@@ -217,10 +219,18 @@
                                     ?>
                                     <div class='<?= $sliderContentKey ?>' >
                                         <article>
-                                            <h3 class="SliderArticle__Title--hidden">Skill description</h3>
+                                            <?php
+                                            if (isset($sliderContent["subtitle"])) {
+                                                for ($i=0; $i < count($sliderContent["subtitle"]); $i++):
+                                                    ?>
+                                                    <h3 class="SliderArticle__Title--hidden"> <?= $sliderContent["subtitle"][$i] ?> description</h3>
+                                                    <?php
+                                                endfor;
+                                            }
+                                            ?>
                                             <p><?= $sliderContent['content'] ?></p>
                                             <canvas>
-                                                <img src='' alt=''/>
+                                                <img src='#' alt='descrImg'/>
                                             </canvas>
                                         </article>
                                     </div>
@@ -237,13 +247,13 @@
                     </div>
                     <div class='Videos__PlayerButton'>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 200 200" xml:space="preserve">
+                            viewBox="0 0 200 200" xml:space="preserve">
                             <title>Play button</title>
                             <polygon points="10,10 90,55 10,100" fill='white' stroke-width='10' stroke-linejoin="round" stroke="white"/>
                         </svg>
                     </div>
                 </div>
-                <input type='checkbox' name='showVideos' id='showVideos'>
+                <input type='checkbox' tabindex="-1" name='showVideos' id='showVideos'>
                 <label for='showVideos' class='Container__showPlayer'></label>
                 <div class='Videos__videosPlayer'>
                     <label for='showVideos'>
@@ -254,7 +264,7 @@
                             <line x1="100" y1="10" x2="10" y2="100" stroke="white" stroke-linecap="round" stroke-width="10"/>
                         </svg>
                     </label>
-                    <iframe width="560" itemprop='video' height="315" src="https://www.youtube.com/embed/XhepwtKR5lg" title="YouTube video player" frameborder="0"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XhepwtKR5lg" title="YouTube video player" frameborder="0"></iframe>
                     <p>arthur in coding</p>
                 </div>
             </section>
@@ -263,7 +273,7 @@
                     <h2>Subskill</h2>
                     <p>Sub skills</p>
                     <?php foreach (CONFIG['subskills'] as $SubskillsKey => $SubskillsElement):?>
-                        <input type="radio" id="<?= $SubskillsKey ?>" name="subskill" value="" <?php if ($subskillsnbr === 0){ echo "checked";}?>>
+                        <input tabindex="-1" type="radio" id="<?= $SubskillsKey ?>" name="subskill" value="" <?php if ($subskillsnbr === 0){ echo "checked";}?>>
                         <label for="<?= $SubskillsKey?>"><?= $SubskillsKey ?></label>
                         
                     <?php $subskillsnbr++; endforeach; ?>
@@ -281,7 +291,7 @@
                 <h2>Mes projetx</h2>
                 <?php foreach (CONFIG['projects'] as $ProjectElement):
                 ?>
-                <div class='SliderProject'>
+                <div class='slider__Projects'>
                     <a href='<?= $ProjectElement['link']?>' title='<?= $ProjectElement['alt']?>' ><img src='/src/img/<?= $ProjectElement['img']?>' width='<?= $ProjectElement['ImgWidth']?>' height='<?= $ProjectElement['ImgHeight']?>' alt='<?= $ProjectElement['alt']?>'></a>
                     <p><?= $ProjectElement['description']?></p>
                 </div>

@@ -3,7 +3,17 @@
   text-decoration: none;
   position: relative;
 }
-
+.warning{
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  padding: 0.5vh 0vw;
+  background-color: $warning;
+  font-size: 1.2em
+}
 nav h2{
   @extend %hidden;
 }
@@ -16,6 +26,7 @@ nav h2{
   display: grid;
   grid-template-areas: "nth menu";
   grid-template-columns: 1fr 10fr;
+  font-size: 1.5em;
 }
 //link hover animation
 .MainMenu__Links a:after {
@@ -37,7 +48,7 @@ nav h2{
 }
 .menu{
   grid-area: menu;
-  padding-top: 2vh;
+  padding-top: 3vh;
   li{
     display: inline-block;
   }
@@ -54,6 +65,7 @@ nav h2{
   position: fixed;
   right: 0;
   top: 0;
+  font-size: 1.5em;
   div{
     position: absolute;
     top: 0;
