@@ -3,16 +3,16 @@
   text-decoration: none;
   position: relative;
 }
-.warning{
+.warning {
   display: inline-block;
-  z-index: 2;
+  z-index: 0;
   text-align: center;
   position: absolute;
   width: 100vw;
   top: 0;
   padding: 0.5vh 0vw;
   background-color: $warning;
-  font-size: 1.2em
+  font-size: 1.2em;
 }
 nav h2{
   @extend %hidden;
@@ -45,6 +45,7 @@ nav h2{
 .MainMenu__Links a:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  box-sizing: content-box;
 }
 .menu{
   grid-area: menu;

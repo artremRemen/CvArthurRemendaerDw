@@ -4,7 +4,7 @@
     $subskillsnbr = 0;
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -121,7 +121,7 @@
             <nav class="SubMenu">
                 <h2>Sub menu</h2>
                 <ul class='SubMenu__container'>
-                    <li class='MainMenu__Links'><a href="" title="" >Shop</a></li>
+                    <li class='MainMenu__Links'><a href="./src/php/shop.php" title="" >Shop</a></li>
                     <li>
                         <input class='SubMenu__input' tabindex="-1" id='SubMenu__Button' tabindex="-1" name="SubMenu__Button" type='checkbox' />
                         <div></div>
@@ -159,7 +159,7 @@
                 <h2>quelques chiffres</h2>
                 <div><div class='Chiffres'>0</div> <div>3D MODELS</div> </div>
                 <div><div class='Chiffres'>0</div> <div>WEB SITES</div> </div>
-                <div><div class='Chiffres'>0</div> <div>PUBLICS PROJECTS</div> </div>
+                <div><div class='Chiffres'>0</div> <div>Branding créations</div> </div>
             </section >
             <section class='Main__about' id='about'>
                 <h2>description</h2>
@@ -167,7 +167,7 @@
 
                 </canvas>
                 <p itemprop='description' itemprop='makesOffer'>
-                Arthur Remendaer is a young self-taught <span itemprop='jobTitle'>web developer</span> and able to evolve in all circumstances that it is <span itemprop='jobTitle'>front-end</span> and <span itemprop='jobTitle'>back-end</span>. He has in addition to his studies of <span itemprop='jobTitle'>web development</span> refine his abilities in the field of <span itemprop='makesOffer'>3D modeling</span> to be able to integrate some of its model to the sites he creates if necessary, without forgetting the fact that with his diploma of electrician he is able to detect most of the problems of computers and to solve them.
+                I'm a young self-taught <span itemprop='jobTitle'>web developer</span> and able to evolve in all circumstances that it is <span itemprop='jobTitle'>front-end</span> and <span itemprop='jobTitle'>back-end</span>. I has in addition to his studies of <span itemprop='jobTitle'>web development</span> refine my abilities in the field of <span itemprop='makesOffer'>3D modeling</span> to be able to integrate some of its model to the sites he creates if necessary, without forgetting the fact that with my diploma of electrician he is able to detect most of the problems of computers and to solve them.
                 </p>
             </section >
             <section class='Main__slider' id="skills">
@@ -175,6 +175,7 @@
                 <?php foreach(CONFIG['slider']['slider1'] as $sliderKey =>$SliderElement): 
                 ?> 
                         <div class="slider__Container">
+                            <div>
                                 <p itemprop='name'>Arthur remendaer</p>
                                 <p><?= $sliderKey ?></p>
                                 <?php
@@ -219,15 +220,7 @@
                                     ?>
                                     <div class='<?= $sliderContentKey ?>' >
                                         <article>
-                                            <?php
-                                            if (isset($sliderContent["subtitle"])) {
-                                                for ($i=0; $i < count($sliderContent["subtitle"]); $i++):
-                                                    ?>
-                                                    <h3 class="SliderArticle__Title--hidden"> <?= $sliderContent["subtitle"][$i] ?> description</h3>
-                                                    <?php
-                                                endfor;
-                                            }
-                                            ?>
+                                                    <h3 class="SliderArticle__Title--hidden"> <?= $sliderContentKey ?> description</h3>
                                             <p><?= $sliderContent['content'] ?></p>
                                             <canvas>
                                                 <img src='#' alt='descrImg'/>
@@ -236,6 +229,7 @@
                                     </div>
                                     <?php endforeach ?>
                                     <?php endif ?>
+                            </div>
                         </div>
                         <?php $SliderNbr ++; endforeach ?>
             </section>

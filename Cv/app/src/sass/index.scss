@@ -90,8 +90,7 @@ header {
         @extend %hidden;
     }
     p{
-        z-index: 2;
-        width: 50vw;
+        width: 40vw;
         position: absolute;
         top: 35vh;
         padding-left: 10vw;
@@ -124,7 +123,7 @@ header {
         @extend %hidden;
     }
     input {
-        @extend %hidden;
+        @extend %hiddenInput;
     }
     label{
         cursor: pointer;
@@ -145,15 +144,18 @@ header {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    left:0vw;
+    width: 100vw;
     display: block;
-    width: 50vw;
-    transform: scale(1,1);
     transform-origin: left;
-    transition: 2s;
-    padding: 30vh 10vw 0 10vw;
+    padding: 30vh 0vw 0 0vw;
+    transform: scale(1, 1);
+    >div{
+        width: 40vw;
+        padding: 0 5vw;
+    }
     p{   
-        padding: 0 10vw 0 0vw;
+        padding: 0 0vw 0 0vw;
+        width: 40vw;
     }
     table{
         display: block;
@@ -230,7 +232,7 @@ header {
     }
     
     input{
-        @extend %hidden;
+        @extend %hiddenInput;
     }
 }
 .Video__Container--resize{
@@ -299,15 +301,15 @@ header {
 .Main__Subskills{
     width: 100vw;
     height: 100vh;
-    input, h2{
+    font-size: 1.3em;
+    input{
+        @extend %hiddenInput;
+    }
+    h2{
         @extend %hidden;
     }
     p{
         width: 100%;
-    }
-    p:first-of-type{
-        font-size: 1.25em;
-        padding-bottom: 5vh;
     }
     label{
         grid-area: label;
@@ -332,6 +334,10 @@ header {
 .Subskills__Cat{
     padding: 25vh 10vw;
     width: 40vw;
+    >p{
+        font-size: 1.25em;
+        padding-bottom: 5vh;
+    }
 }
 .Subskills__content{
     padding-top: 3vh;
@@ -357,11 +363,16 @@ header {
     }
     a{
         overflow: hidden;
-        display: block;
         height:90vh;
+        display: flex;
+        justify-content: center;
     }
     img{
-        max-width: 100%;
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: none;
+        object-fit: cover;
+        margin:auto;
     }
     p{
         padding-top: 2vh;
@@ -378,12 +389,10 @@ header {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    left:0vw;
-    top: 0;
-    display: block;
     width: 100vw;
-    padding: 0 10vw 0 10vw;
-    transform: scale(1,1);
+    display: block;
+    transform-origin: left;
+    transform: scale(1, 1);
     transition: 2s;
 }
 
@@ -425,7 +434,7 @@ header {
     width: 100vw;
     text-align: center;
     input[id='Contact__MailInput']{
-        @extend %hidden;
+        @extend %hiddenInput;
     }
     form{
         position: absolute;
@@ -538,6 +547,7 @@ header {
 footer{
     font-size: 0.75em;
     text-align: center;
+    padding: 0 5vw;
     padding-bottom: 5vh;
     p, ul, li{
         display: inline-block;
@@ -559,23 +569,10 @@ footer{
 .Main__slider{
     position: relative;
 }
-.Container--Before{
-    left:100vw;
-    transform: scale(0,1);
-}
-.Container--after{
-    transform: scale(0,1);
-    left:-100vw;
-}
 .SliderLeft, .SliderRight{
     z-index: 2;
     cursor: pointer;
-    width: 5vw;
-    height: 5vw;
-    position: absolute;
     bottom: 3vh;
-}
-.SliderLeft, .SliderRight{
     width: 3vw;
     height: 3vw;
     position: absolute;
@@ -631,7 +628,27 @@ footer{
         transition-duration: 1s;
     }
 }
+.slider__TouchMouse{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60vw;
+}
 
+@media screen and (max-width:1700px) {
+    .Main__about p{
+        font-size: 1.4em;
+    }
+    .Main__slider{
+        font-size: 1.4em;
+    }
+    .Main__Projects{
+        
+        font-size: 1em;
+    }
+}
 
 @media screen and (max-width:960px) {
 
@@ -721,11 +738,11 @@ footer{
       }
 
     .Main__about p{
-        font-size: 0.75em;
+        font-size: 1.2em;
     }
 
     .Main__slider{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .SliderLeft, .SliderRight{
@@ -785,10 +802,18 @@ footer{
         }
     }
     .slider__Container{
-        width: 100vw;
+        div{
+            width: 90vw;
+        }
+        p{
+            width:90vw;
+        }
     }
     .Subskills__Cat {
-        width: 100vw;
+        width: 80vw;
+    }
+    .Subskills__content{
+        font-size: 2em;
     }
     .Main__download{
         a{
@@ -804,7 +829,7 @@ footer{
 
     .Main__Projects{
         
-        font-size: 0.3em;
+        font-size: 0.5em;
     }
 
     .Download__Container{
@@ -851,5 +876,22 @@ footer{
             margin-bottom: 3vh;
             margin-top: 2vh;
         }
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .Main__about p{
+        font-size: 0.75em;
+    }
+    .Main__slider{
+        font-size: 1em;
+    }
+    .Main__Projects{
+        
+        font-size: 0.3em;
+    }
+    .Subskills__content{
+        font-size: 1.5em;
     }
 }

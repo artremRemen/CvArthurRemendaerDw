@@ -1,32 +1,32 @@
 {
     "menu": {
         "about": {
-            "name": "About",
+            "name": "ABOUT",
             "link": "#about",
             "title": "All about me"
         },
         "Skills": {
-            "name": "Skills",
+            "name": "SKILLS",
             "link": "#skills",
             "title": "My main skills"
         },
         "subskills": {
-            "name": "Videos",
+            "name": "VIDEOS",
             "link": "#videos",
             "title": "my in videos"
         },
         "video": {
-            "name": "SubSkills",
+            "name": "SUBSKILLS",
             "link": "#subskills",
             "title": "All about my subskills"
         },
         "projects": {
-            "name": "Projects",
+            "name": "PROJECTS",
             "link": "#Projects",
             "title": "somme projects"
         },
         "portfolio": {
-            "name": "Portfolio",
+            "name": "PORTFOLIO",
             "link": "#",
             "title": "Go to my portfolio "
         }
@@ -70,14 +70,14 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "<span itemprop='name'>Arthur</span> learned <span itemprop='knowsLanguage'><abbr title='Hypertext Markup Language'>HTML</abbr></span> by himself and then improved his skills in courses at the high school of the province of Liege and allowed him to create cleaner code than before. He also learned a lot about <abbr title='Search Engine Optimisation'> SEO </abbr> which gives him the possibility to create websites that are well placed for google searches."
+                        "content": "I learned <span itemprop='knowsLanguage'><abbr title='Hypertext Markup Language'>HTML</abbr></span> by myself and then improved my skills in courses at the high school of the province of Liege and allowed me to create cleaner code than before. I also learned a lot about <abbr title='Search Engine Optimisation'> SEO </abbr> which gives me the possibility to create websites that are well placed for google searches."
                     },
                     "svg": {
                         "img": "Slider/svg",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "<span itemprop='name'>Arthur</span> learned the <span itemprop='knowsLanguage'><abbr title='Scalable Vector Graphics'>SVG</abbr></span> language in courses at the high school of the province of Liege for the most part even if he has already used some parts of the language before which allows him to easily animate an image and especially to create a site more user friendly, more <span itemprop='makesOffer'>responvie</span> and that requires less loading time to the user no matter the platform used"
+                        "content": "I learned the <span itemprop='knowsLanguage'><abbr title='Scalable Vector Graphics'>SVG</abbr></span> language in courses at the high school of the province of Liege for the most part even if I has already used some parts of the language before which allows me to easily animate an image and especially to create a site more user friendly, more <span itemprop='makesOffer'>responvie</span> and that requires less loading time to the user no matter the platform used"
                     }
                 }
             },
@@ -89,14 +89,14 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
+                        "content": "I learned the <span itemprop='knowsLanguage'><abbr title='Cascading Style Sheet'>CSS</abbr></span> language by myself to then improve my skills in courses at the high school of the province of Liege and allow me to create sites more push in the levels of design and more responsive than before.< /br>I also learned to improve my positioning thanks to gridLayout and flexbox."
                     },
                     "sass": {
                         "img": "Slider/sass",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
+                        "content": "I learned the <span itemprop='knowsLanguage'><abbr title='Syntactically Awesome Style Sheets'>SASS</abbr></span> language entirely on my own in order to facilitate my way of coding websites and to allow me to create more advanced websites in terms of design."
                     }
                 }
             },
@@ -108,21 +108,21 @@
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
+                        "content": "I learned the javascript language in large part by myself to then improve my skills in courses at the high school of the province of Liege This language has allowed me to significantly improve the interaction with visitors to the sites and has opened up a huge field of development possibilities."
                     },
-                    "Ts": {
+                    "TypeScript": {
                         "img": "Slider/ts",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
+                        "content": "I learned the Typescript language in big part at the high school of the Province of Liege and a little bit by myself to be able to avoid in a more powerful way the possibilities of error and to allow me to code more easily and in a cleaner way"
                     },
-                    "NJ": {
+                    "NodeJs": {
                         "img": "Slider/nodejs",
                         "alt": "description Img",
                         "ImgWidth": "100",
                         "ImgHeight": "100",
-                        "content": "parapgraphe expliquant la facon dont j'ai appris l'HTML"
+                        "content": "I learned the Node JS language entirely by myself in order to create applications under express Js and under DiscordJs which allowed me to create moderation bots that communicate with a database."
                     }
                 }
             },

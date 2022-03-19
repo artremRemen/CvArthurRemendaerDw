@@ -2,6 +2,19 @@
 %hidden {
     position: absolute;
     overflow: hidden;
+    width: 1px;
+    height: 1px;
+    top:-500px;
+    left:0px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+%hiddenInput {
+    position: absolute;
+    overflow: hidden;
     visibility: hidden;
     width: 1px;
     height: 1px;

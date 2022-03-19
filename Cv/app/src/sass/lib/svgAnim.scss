@@ -4,15 +4,15 @@
     pointer-events: none;
 }
 .Rocket {
-    animation: Rocket 3s linear forwards;
+    animation: Rocket 2s linear forwards;
 }
 .Smoke {
     transform-origin: bottom center;
-    animation: smoke 2s linear forwards;
+    animation: smoke 1s linear forwards;
 }
 .Logos {
     transform-origin: center;
-    animation: Logos 4s linear forwards;
+    animation: Logos 2s linear forwards;
 }
 
 //button hover
@@ -71,7 +71,7 @@ input:checked ~ label .Button__Image__Path3 {
     0% {
         transform: scale(0, 0);
     }
-    60% {
+    80% {
         transform: scale(0, 0);
     }
     100% {
